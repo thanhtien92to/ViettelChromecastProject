@@ -64,7 +64,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
     txmlhttp.setRequestHeader("Authorization", "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==");
     txmlhttp.send(null);
     txmlhttp.onreadystatechange = function() {
-            alert("OnReadystatechange + " + txmlhttp.readyState + " " + txmlhttp.status);
+            console.log("OnReadystatechange + " + txmlhttp.readyState + " " + txmlhttp.status + " " + JSON.stringify(txmlhttp));
            if (txmlhttp.readyState == 4) {
               if ( txmlhttp.status == 200) {
 
