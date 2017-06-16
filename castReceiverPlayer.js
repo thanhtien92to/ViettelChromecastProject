@@ -90,10 +90,10 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             dataType: "json",
             success: function (response) {
                 var resp = JSON.parse(response)
-                console.log(JSON.stringify(resp));
+                console.log("xmljquery" + JSON.stringify(resp));
             },
             error: function (xhr, status) {
-                console.log(JSON.stringify(xhr));
+                console.log("xmljquery" + JSON.stringify(xhr));
             }
         });
 
@@ -105,10 +105,10 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             dataType: "json",
             success: function (response) {
                 var resp = JSON.parse(response)
-                console.log(JSON.stringify(resp));
+                console.log("xmljquery" + JSON.stringify(resp));
             },
             error: function (xhr, status) {
-                console.log(JSON.stringify(xhr));
+                console.log("xmljquery" + JSON.stringify(xhr));
             }
         });
 
