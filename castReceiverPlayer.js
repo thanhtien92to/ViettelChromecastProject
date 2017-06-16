@@ -1509,6 +1509,16 @@ castReceiverPlayer.addClassWithTimeout_ = function (element, className, timeout)
 };
 castReceiverPlayer.ChromecastPlayer.prototype.updateProgress_ = function () {
     // Update the time and the progress bar
+	
+	function reqListener () {
+		console.log("XMLHttpRequest " + this.responseText);
+	}
+
+	var oReq = new XMLHttpRequest();
+	oReq.addEventListener("load", reqListener);
+	oReq.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png");
+	oReq.send();
+	
     if (!castReceiverPlayer.isCastForAudioDevice_()) {
         var curTime = this.mediaElement_.currentTime;
         var totalTime = this.mediaElement_.duration;
