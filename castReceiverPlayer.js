@@ -59,7 +59,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
 	document.getElementById("testImg").src="https://192.168.1.226/ViettelChromecast/image/alticast.png"
 	
 	var  txmlhttp = new XMLHttpRequest();
-    var url = "http://192.168.1.226/ViettelChromecast/image/alticast.png";
+    var url = "https://192.168.1.226/ViettelChromecast/image/alticast.png";
     txmlhttp.open('GET',url,true);
     txmlhttp.setRequestHeader("Authorization", "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==");
     txmlhttp.send(null);
