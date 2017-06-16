@@ -49,7 +49,9 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
            else {
            }
 		   console.log("xmlhttp : " + JSON.stringify(xmlhttp));
-        };
+        };http://192.168.1.226/ViettelChromecast/castReceiverPlayer.html
+		
+		xmlhttp.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png", true);
     xmlhttp.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png", true);
 	xmlhttp.send();
 	console.log("xmlhttp : " + JSON.stringify(xmlhttp));
