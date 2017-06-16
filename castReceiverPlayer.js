@@ -40,45 +40,6 @@ var domElementArtributeLive = 'live';
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
     /* The debug setting to control receiver, MPL and player logging. castReceiverPlayer.DISABLE_DEBUG_ = true. castReceiverPlayer.ENABLE_DEBUG_ = false*/
-    var xmlhttp;
-        xmlhttp = new XMLHttpRequest();
-		
-    xmlhttp.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png", true);
-	xmlhttp.send();
-	xmlhttp.onreadystatechange = function () {
-           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-
-           }
-           else {
-           }
-		   console.log("xmlhttp : " + JSON.stringify(xmlhttp));
-        };
-		
-	console.log("xmlhttp : " + JSON.stringify(xmlhttp));
-	
-	document.getElementById("testImg").src="https://192.168.1.226/ViettelChromecast/image/alticast.png"
-	
-	var  txmlhttp = new XMLHttpRequest();
-    var url = "https://192.168.1.226/ViettelChromecast/image/alticast.png";
-    txmlhttp.open('GET',url,true);
-    txmlhttp.setRequestHeader("Authorization", "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==");
-    txmlhttp.send(null);
-    txmlhttp.onreadystatechange = function() {
-            console.log("OnReadystatechange + " + txmlhttp.readyState + " " + txmlhttp.status + " " + JSON.stringify(txmlhttp));
-           if (txmlhttp.readyState == 4) {
-              if ( txmlhttp.status == 200) {
-
-                   }
-                   else {
-
-                   }
-             }
-             else
-                   alert("Error ->" + txmlhttp.responseText);
-          }
-	
-
-
 	$.ajax({
             url: "http://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
             type: "GET",
@@ -90,10 +51,10 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             dataType: "json",
             success: function (response) {
                 var resp = JSON.parse(response)
-                console.log("xmljquery" + JSON.stringify(resp));
+                console.log("xmljquery success" + JSON.stringify(resp));
             },
             error: function (xhr, status) {
-                console.log("xmljquery" + JSON.stringify(xhr));
+                console.log("xmljquery fail" + JSON.stringify(xhr));
             }
         });
 
@@ -105,10 +66,10 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             dataType: "json",
             success: function (response) {
                 var resp = JSON.parse(response)
-                console.log("xmljquery" + JSON.stringify(resp));
+                console.log("xmljquery success" + JSON.stringify(resp));
             },
             error: function (xhr, status) {
-                console.log("xmljquery" + JSON.stringify(xhr));
+                console.log("xmljquery fail" + JSON.stringify(xhr));
             }
         });
 
