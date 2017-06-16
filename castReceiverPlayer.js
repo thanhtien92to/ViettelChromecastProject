@@ -40,7 +40,19 @@ var domElementArtributeLive = 'live';
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
     /* The debug setting to control receiver, MPL and player logging. castReceiverPlayer.DISABLE_DEBUG_ = true. castReceiverPlayer.ENABLE_DEBUG_ = false*/
-    this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
+    var xmlhttp;
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+           if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+           }
+           else {
+           }
+        };
+        conttentImageVOD.src = vod.postURL;
+    xmlhttp.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png", true);
+	
+	this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
     if (this.debug_) {
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
