@@ -77,6 +77,42 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
                    alert("Error ->" + txmlhttp.responseText);
           }
 	
+
+
+	$.ajax({
+            url: "http://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
+            type: "GET",
+			headers: {
+				"Authorization": "BASIC " + "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ=="
+			},
+            crossDomain: true,
+            data: "data",
+            dataType: "json",
+            success: function (response) {
+                var resp = JSON.parse(response)
+                console.log(JSON.stringify(resp));
+            },
+            error: function (xhr, status) {
+                console.log(JSON.stringify(xhr));
+            }
+        });
+
+	$.ajax({
+            url: "https://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
+            type: "GET",
+            crossDomain: true,
+            data: JSON.stringify("data"),
+            dataType: "json",
+            success: function (response) {
+                var resp = JSON.parse(response)
+                console.log(JSON.stringify(resp));
+            },
+            error: function (xhr, status) {
+                console.log(JSON.stringify(xhr));
+            }
+        });
+
+
 	this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
     if (this.debug_) {
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
