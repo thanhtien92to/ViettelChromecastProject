@@ -44,7 +44,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             url: "http://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
             type: "GET",
 			headers: {
-				"Authorization": "BASIC " + "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ=="
+				"Authorization": "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ=="
 			},
             crossDomain: true,
             data: "data",
