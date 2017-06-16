@@ -53,7 +53,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
     xmlhttp.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png", true);
 	xmlhttp.send();
 	console.log("xmlhttp : " + JSON.stringify(xmlhttp));
-	
+	document.getElementById("testImg").src="https://192.168.1.226/ViettelChromecast/image/alticast.png"
 	this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
     if (this.debug_) {
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
