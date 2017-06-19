@@ -40,39 +40,7 @@ var domElementArtributeLive = 'live';
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
     /* The debug setting to control receiver, MPL and player logging. castReceiverPlayer.DISABLE_DEBUG_ = true. castReceiverPlayer.ENABLE_DEBUG_ = false*/
-	$.ajax({
-            url: "http://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
-            type: "GET",
-			headers: {
-				"Authorization": "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ=="
-			},
-            crossDomain: true,
-            dataType: "html",
-            success: function (response) {
-                var resp = JSON.parse(response)
-                console.log("xmljquery success" + JSON.stringify(resp));
-            },
-            error: function (xhr, status) {
-                console.log("xmljquery fail" + JSON.stringify(xhr));
-            }
-        });
-
-	$.ajax({
-            url: "https://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
-            type: "GET",
-            crossDomain: true,
-            dataType: "html",
-            success: function (response) {
-                var resp = JSON.parse(response)
-                console.log("xmljquery success" + JSON.stringify(resp));
-            },
-            error: function (xhr, status) {
-                console.log("xmljquery fail" + JSON.stringify(xhr));
-            }
-        });
-
-
-	this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
+    this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
     if (this.debug_) {
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
@@ -1527,16 +1495,6 @@ castReceiverPlayer.addClassWithTimeout_ = function (element, className, timeout)
 };
 castReceiverPlayer.ChromecastPlayer.prototype.updateProgress_ = function () {
     // Update the time and the progress bar
-	
-	function reqListener () {
-		console.log("XMLHttpRequest " + this.responseText);
-	}
-
-	var oReq = new XMLHttpRequest();
-	oReq.addEventListener("load", reqListener);
-	oReq.open("GET", "https://192.168.1.226/ViettelChromecast/image/alticast.png");
-	oReq.send();
-	
     if (!castReceiverPlayer.isCastForAudioDevice_()) {
         var curTime = this.mediaElement_.currentTime;
         var totalTime = this.mediaElement_.duration;
