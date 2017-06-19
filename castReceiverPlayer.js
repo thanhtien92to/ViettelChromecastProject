@@ -47,8 +47,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
 				"Authorization": "BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ=="
 			},
             crossDomain: true,
-            data: "data",
-            dataType: "json",
+            dataType: "html",
             success: function (response) {
                 var resp = JSON.parse(response)
                 console.log("xmljquery success" + JSON.stringify(resp));
@@ -62,8 +61,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
             url: "https://192.168.1.226/ViettelChromecast/castReceiverPlayer.html",
             type: "GET",
             crossDomain: true,
-            data: JSON.stringify("data"),
-            dataType: "json",
+            dataType: "html",
             success: function (response) {
                 var resp = JSON.parse(response)
                 console.log("xmljquery success" + JSON.stringify(resp));
