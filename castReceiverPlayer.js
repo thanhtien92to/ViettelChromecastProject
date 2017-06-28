@@ -449,7 +449,7 @@ castReceiverPlayer.State = {
 
 castReceiverPlayer.BURN_IN_TIMEOUT = 30 * 1000; //The amount of time (millisecond) a screen should stay idle before burn in prevention kicks in. @type {number}
 castReceiverPlayer.MEDIA_INFO_DURATION_ = 3 * 1000; //The minimum duration (millisecond) that media info is displayed. @const @private {number}
-castReceiverPlayer.TRANSITION_DURATION_ = 1.5; //Transition animation duration (in sec). @const @private {number}
+castReceiverPlayer.TRANSITION_DURATION_ = 0.5; //Transition animation duration (in sec). @const @private {number}
 castReceiverPlayer.ENABLE_DEBUG_ = true; //Const to enable debugging. @const @private {boolean}
 castReceiverPlayer.DISABLE_DEBUG_ = false; //Const to disable debugging. #@const @private {boolean}
 
@@ -1485,7 +1485,7 @@ castReceiverPlayer.fadeTo_ = function (element, opacity, time, opt_doneFunc) {
     element.style.opacity = opacity;
 };
 castReceiverPlayer.fadeIn_ = function (element, time, opt_doneFunc) {
-    castReceiverPlayer.fadeTo_(element, '', time, opt_doneFunc);
+    castReceiverPlayer.fadeTo_(element, 1, time, opt_doneFunc);
 };
 castReceiverPlayer.fadeOut_ = function (element, time, opt_doneFunc) {
     castReceiverPlayer.fadeTo_(element, 0, time, opt_doneFunc);
