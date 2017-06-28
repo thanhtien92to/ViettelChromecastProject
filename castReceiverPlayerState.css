@@ -234,6 +234,9 @@
 .media-player-dom[state="idle"] .spinner-progress{
   display: none;
 }
+.media-player-dom[state="idle"] {
+	opacity: 0;
+}
 .media-player-dom[state="idle"] .chrome-cast-logo {
   display: block;
 }
