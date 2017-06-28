@@ -171,7 +171,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.onPlaying_ = function () {
     var isAudio = this.mediaType_ == castReceiverPlayer.Type.AUDIO;
     var isLoading = this.playerState_ == castReceiverPlayer.State.LOADING;
     var crossfade = isLoading && !isAudio;
-    this.setPlayerState_(castReceiverPlayer.State.PLAYING, crossfade);
+    //this.setPlayerState_(castReceiverPlayer.State.PLAYING, crossfade);
+	this.setPlayerState_(castReceiverPlayer.State.PLAYING, false);
 };
 castReceiverPlayer.ChromecastPlayer.prototype.onPause_ = function () {
     console.log('Player Event --- onPause');
@@ -190,12 +191,12 @@ castReceiverPlayer.ChromecastPlayer.prototype.onPause_ = function () {
 };
 castReceiverPlayer.ChromecastPlayer.prototype.onEnded_ = function () {
     console.log('Player Event --- onEnded');
-    this.setPlayerState_(castReceiverPlayer.State.IDLE, true);
+    this.setPlayerState_(castReceiverPlayer.State.IDLE, false);
     this.hidePreviewMode_();
 };
 castReceiverPlayer.ChromecastPlayer.prototype.onAbort_ = function () {
     console.log('Player Event --- onAbort');
-    this.setPlayerState_(castReceiverPlayer.State.IDLE, true);
+    this.setPlayerState_(castReceiverPlayer.State.IDLE, false);
     this.hidePreviewMode_();
 };
 castReceiverPlayer.ChromecastPlayer.prototype.onProgress_ = function () {
