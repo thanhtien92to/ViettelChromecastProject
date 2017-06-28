@@ -4,7 +4,7 @@
   src: url(font/Roboto-Regular.ttf);
 }
 .media-player-dom {
-  background-image: url("image/background.png");
+  background-image: url("image/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
