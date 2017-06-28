@@ -235,7 +235,7 @@
   display: none;
 }
 .media-player-dom[state="idle"] {
-	opacity: 0;
+  opacity: 1;
 }
 .media-player-dom[state="idle"] .chrome-cast-logo {
   display: block;
