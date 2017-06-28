@@ -1137,7 +1137,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.setPlayerState_ = function (state,
             self.playerState_ = state;
             self.domElement_.setAttribute(domElementArtributeState, state);
             self.updateApplicationState_();
-            self.setIdleTimeout_(castReceiverPlayer.IDLE_TIMEOUT[state.toUpperCase()]);
+			if(state != 'PLAYING'){
+				self.setIdleTimeout_(castReceiverPlayer.IDLE_TIMEOUT[state.toUpperCase()]);
+			}
         } else {
             var stateTransitionTime = self.lastStateTransitionTime_;
             castReceiverPlayer.transition_(self.domElement_, castReceiverPlayer.TRANSITION_DURATION_,

@@ -55,6 +55,9 @@
 /* (End) player type = video, state = launching*/
 
 /* media-player-dom type = video, state = loading*/
+.media-player-dom[type="video"][state="loading"] {
+	background-image: url("image/background.png");
+}
 .media-player-dom[type="video"][state="loading"] .media-info-show-part{
   display: block;
 }
