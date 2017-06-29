@@ -45,7 +45,6 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
     }
-
     this.domElement_ = domElement; //The DOM element the player is attached. @private {!Element}
     this.mediaType_; //The current type of the player. @private {castReceiverPlayer.Type}
     this.setMediaType_(castReceiverPlayer.Type.UNKNOWN, false);
