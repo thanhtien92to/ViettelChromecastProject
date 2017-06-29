@@ -45,6 +45,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
     }
+
     this.domElement_ = domElement; //The DOM element the player is attached. @private {!Element}
     this.mediaType_; //The current type of the player. @private {castReceiverPlayer.Type}
     this.setMediaType_(castReceiverPlayer.Type.UNKNOWN, false);
@@ -406,7 +407,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.onQueueUpdate_ = function (event) 
 
 castReceiverPlayer.IDLE_TIMEOUT = {
     LAUNCHING: 6 * 60 * 1000, // 6 minutes
-    LOADING: 6 * 60 * 1000,  // 6 minutes
+    LOADING: 2 * 60 * 1000,  // 6 minutes
     PAUSED: 10 * 60 * 1000,  // 10 minutes
     DONE: 6 * 60 * 1000,     // 6 minutes
     IDLE: 6 * 60 * 1000      // 6 minutes
