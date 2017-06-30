@@ -1536,7 +1536,7 @@ castReceiverPlayer.formatDuration_ = function (dur) {
     var min = Math.floor(dur / 60) % 60;
     var sec = dur % 60;
     if (!hr) {
-        return digit(min) + ':' + digit(sec);
+        return '00'+digit(min) + ':' + digit(sec);
     } else {
         return digit(hr) + ':' + digit(min) + ':' + digit(sec);
     }

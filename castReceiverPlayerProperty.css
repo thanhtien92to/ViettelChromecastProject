@@ -244,16 +244,16 @@
 .media-player-dom .controls-cur-time {
   float: left;
   line-height: 30px;
-  margin-left: 10px;
+  margin-left: 30px;
   margin-right: 10px;
   font-family: "Roboto-Regular";
-  /**/display: none/**/;
+  display: none/**/;
 }
 .media-player-dom .controls-total-time {
   float: right;
-  line-height: 30px;
+  line-height: 25px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 30px;
   font-family: "Roboto-Regular";
   /**/display: none/**/;
 }
