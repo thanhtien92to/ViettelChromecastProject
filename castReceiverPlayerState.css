@@ -239,6 +239,12 @@
 .media-player-dom[state="idle"] {
   opacity: 1;
 }
+.media-player-dom[type="video"][state="idle"][lang="en"] {
+	background-image: url("image/background.jpg");
+}
+.media-player-dom[type="video"][state="idle"][lang="vi"] {
+	background-image: url("image/background_vi.jpg");
+}
 .media-player-dom[state="idle"] .chrome-cast-logo {
   display: block;
 }
