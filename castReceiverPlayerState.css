@@ -28,10 +28,12 @@
 /* (End) Define webkit animation*/
 
 /* player type = video, state = launching*/
-.media-player-dom[type="video"][state="launching"] {
+.media-player-dom[type="video"][state="launching"][lang="en"] {
 	background-image: url("image/background.jpg");
 }
-
+.media-player-dom[type="video"][state="launching"][lang="vi"] {
+	background-image: url("image/background_vi.jpg");
+}
 .media-player-dom[type="video"][state="launching"] .media-info-show-part,
 .media-player-dom[type="video"][state="launching"] .chrome-cast-logo{
   display: block;

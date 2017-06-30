@@ -36,6 +36,7 @@ var domElementArtributePreviewMode = 'preview';
 var domElementArtributeType = 'type';
 var domElementArtributeState = 'state';
 var domElementArtributeLive = 'live';
+var domElementArtributeLang = 'lang';
 /* (End) Init Dom Element Artribute var */
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
@@ -45,7 +46,15 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
     }
-
+	/*Set language*/
+	var userLang = navigator.language || navigator.userLanguage; 
+	if(userLang == 'vi'){
+		this.domElement_.setAttribute(domElementArtributeLang,'vi');
+	}
+	else{
+		this.domElement_.setAttribute(domElementArtributeLang,'en');
+	}
+	
     this.domElement_ = domElement; //The DOM element the player is attached. @private {!Element}
     this.mediaType_; //The current type of the player. @private {castReceiverPlayer.Type}
     this.setMediaType_(castReceiverPlayer.Type.UNKNOWN, false);
