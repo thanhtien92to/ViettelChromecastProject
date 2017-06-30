@@ -57,6 +57,14 @@
 /* (End) player type = video, state = launching*/
 
 /* media-player-dom type = video, state = loading*/
+.media-player-dom[type="video"][state="loading"][live="true"] .media-title,
+.media-player-dom[type="video"][state="loading"][live="true"] .media-subtitle{
+	display: none;
+}
+.media-player-dom[type="video"][state="loading"][live="true"] .media-artwork {
+  width: 120px;
+  height: 60px;
+}
 .media-player-dom[type="video"][state="loading"] {
 	background-image: url("image/background.png");
 }
@@ -129,6 +137,12 @@
 /* (End) player type = video, state = buffering*/
 
 /* player type = video, state = paused*/
+.media-player-dom[type="video"][state="paused"][live="true"] .media-artwork,
+.media-player-dom[type="video"][state="paused"][live="true"] .media-title,
+.media-player-dom[type="video"][state="paused"][live="true"] .media-subtitle{
+	display: none;
+}
+
 .media-player-dom[type="video"][state="paused"] .media-info-show-part,
 .media-player-dom[type="video"][state="paused"] .shadow-effect,
 .media-player-dom[type="video"][state="paused"] .watermark {
