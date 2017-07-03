@@ -41,7 +41,17 @@ var domElementArtributeLang = 'lang';
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
     /* The debug setting to control receiver, MPL and player logging. castReceiverPlayer.DISABLE_DEBUG_ = true. castReceiverPlayer.ENABLE_DEBUG_ = false*/
-    this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
+    
+	var vidType = 'video/mp4';
+    var codType = 'avc1.42E01E, mp4a.40.2';
+    var vid = document.createElement('video');
+    var isSupp = vid.canPlayType(vidType+';codecs="'+codType+'"');
+    if (isSupp == "") {
+        isSupp = "No";
+    }
+    console.log('Supported MP4? : ' + isSupp);
+	
+	this.debug_ = castReceiverPlayer.ENABLE_DEBUG_;
     if (this.debug_) {
         cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
