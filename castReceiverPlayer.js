@@ -571,7 +571,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.load = function (info) { //@param 
     var contentType = media.contentType;
     var playerType = castReceiverPlayer.getType_(media);
     var isLiveStream = media.streamType === cast.receiver.media.StreamType.LIVE;
-	isLiveStream = isLiveStream||(media.metadata.title == "_CATCHUP_CONTNENT_");
+	isLiveStream = isLiveStream||(media.metadata.title == "_CATCHUP_CONTENT_");
     if (!media.contentId) {
         console.log('Load failed --- no content');
         self.onLoadMetadataError_(info);
