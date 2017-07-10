@@ -558,6 +558,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 		requestInfo.headers = {};
 		requestInfo.headers['content-type'] = 'text/xml;charset=utf-8';
 		requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+		requestInfo.headers['Origin'] = '*';
 	};
 	
     host.onError = function () {
@@ -794,6 +795,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 		requestInfo.headers = {};
 		requestInfo.headers['content-type'] = 'text/xml;charset=utf-8';
 		requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+		requestInfo.headers['Origin'] = '*';
 	};
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -963,6 +965,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 		requestInfo.headers = {};
 		requestInfo.headers['content-type'] = 'text/xml;charset=utf-8';
 		requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+		requestInfo.headers['Origin'] = '*';
 	};
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
