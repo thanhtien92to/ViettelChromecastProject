@@ -551,13 +551,6 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         'url': url,
         'mediaElement': self.mediaElement_
     });
-	    host.updateSegmentRequestInfo = function(requestInfo) {
-        // example of setting CORS withCredentials
-        requestInfo.withCredentials = true;
-        // example of setting headers
-        requestInfo.headers = {};
-        requestInfo.headers['Origin'] = '*';
-    };
     host.onError = function () {
         self.preloadPlayer_.unload();
         self.preloadPlayer_ = null;
@@ -785,13 +778,6 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
                 'url': url,
                 'mediaElement': this.mediaElement_
             });
-			host.updateSegmentRequestInfo = function(requestInfo) {
-        // example of setting CORS withCredentials
-        requestInfo.withCredentials = true;
-        // example of setting headers
-        requestInfo.headers = {};
-        requestInfo.headers['Origin'] = '*';
-    };
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
             this.player_.load(protocolFunc(host));
@@ -953,14 +939,6 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     'url': '',
                     'mediaElement': this.mediaElement_
                 });
-				host.updateSegmentRequestInfo = function(requestInfo) {
-        // example of setting CORS withCredentials
-        requestInfo.withCredentials = true;
-        // example of setting headers
-        requestInfo.headers = {};
-        requestInfo.headers['content-type'] = 'text/xml;charset=utf-8';
-        requestInfo.headers['Origin'] = '*';
-    };
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
             }
