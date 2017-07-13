@@ -551,7 +551,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         'url': url,
         'mediaElement': self.mediaElement_
     });
-	/***/
+	/***
 	host.updateSegmentRequestInfo = function(requestInfo) {
         // example of setting CORS withCredentials
         // example of setting headers
@@ -786,7 +786,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
                 'url': url,
                 'mediaElement': this.mediaElement_
             });
-			/***/
+			/***
 			host.updateSegmentRequestInfo = function(requestInfo) {
 				// example of setting CORS withCredentials
 				// example of setting headers
@@ -954,7 +954,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     'url': '',
                     'mediaElement': this.mediaElement_
                 });
-				/***/
+				/***
 				host.updateSegmentRequestInfo = function(requestInfo) {
 					// example of setting CORS withCredentials
 					// example of setting headers
