@@ -557,7 +557,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         // example of setting headers
 		console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
-		//requestInfo.headers['Accept'] = '*/*';
+		requestInfo.headers['Accept'] = '*/*';
 		requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream'
         requestInfo.headers['Access-Control-Allow-Origin'] = '*';
     };/**/
@@ -795,7 +795,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				// example of setting headers
 				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
-				//requestInfo.headers['Accept'] = '*/*';
+				requestInfo.headers['Accept'] = '*/*';
 				requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream'
 				requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 			};/***/
@@ -966,7 +966,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 					// example of setting headers
 					console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 					requestInfo.headers = {};
-					// requestInfo.headers['Accept'] = '*/*';
+					requestInfo.headers['Accept'] = '*/*';
 					requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream'
 					requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 				};/****/
