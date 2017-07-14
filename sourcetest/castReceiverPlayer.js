@@ -555,8 +555,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 	host.updateSegmentRequestInfo = function(requestInfo) {
         // example of setting CORS withCredentials
         // example of setting headers
+		console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
-		requestInfo.headers['Accept'] = '*/*';
+		//requestInfo.headers['Accept'] = '*/*';
         requestInfo.headers['Access-Control-Allow-Origin'] = '*';
     };/**/
 
@@ -791,8 +792,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 			host.updateSegmentRequestInfo = function(requestInfo) {
 				// example of setting CORS withCredentials
 				// example of setting headers
+				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
-				requestInfo.headers['Accept'] = '*/*';
+				//requestInfo.headers['Accept'] = '*/*';
 				requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 			};/***/
             host.onError = loadErrorCallback;
@@ -960,8 +962,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 				host.updateSegmentRequestInfo = function(requestInfo) {
 					// example of setting CORS withCredentials
 					// example of setting headers
+					console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 					requestInfo.headers = {};
-					requestInfo.headers['Accept'] = '*/*';
+					//equestInfo.headers['Accept'] = '*/*';
 					requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 				};/****/
                 this.protocol_ = null;
