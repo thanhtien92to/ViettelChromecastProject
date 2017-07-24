@@ -557,10 +557,6 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         // example of setting headers
 		console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
-		requestInfo.headers['Accept'] = 'application/x-mpegURL;application/octet-stream';
-		requestInfo.headers['Cache-Control'] = 'no-cache';
-		requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream';
-        requestInfo.headers['Access-Control-Allow-Origin'] = '*';
     };/**/
 
     host.onError = function () {
@@ -796,10 +792,6 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				// example of setting headers
 				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
-				requestInfo.headers['Accept'] = 'application/x-mpegURL;application/octet-stream';
-				requestInfo.headers['Cache-Control'] = 'no-cache';
-				requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream';
-				requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 			};/***/
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -966,12 +958,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 				host.updateSegmentRequestInfo = function(requestInfo) {
 					// example of setting CORS withCredentials
 					// example of setting headers
-					console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 					requestInfo.headers = {};
-					requestInfo.headers['Accept'] = 'application/x-mpegURL;application/octet-stream';
-					requestInfo.headers['Cache-Control'] = 'no-cache';
-					requestInfo.headers['Content-Type'] = 'application/x-mpegURL;application/octet-stream';
-					requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 				};/****/
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
