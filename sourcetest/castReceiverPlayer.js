@@ -558,6 +558,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 		console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
 		requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+		requestInfo.headers['Access-Control-Allow-Origin'] = '*';
     };/**/
 
     host.onError = function () {
@@ -794,6 +795,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
 				requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+				requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 			};/***/
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -962,6 +964,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 					// example of setting headers
 					requestInfo.headers = {};
 					requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+					requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 				};/****/
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
