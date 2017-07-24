@@ -552,14 +552,12 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         'mediaElement': self.mediaElement_
     });
 	/***/
-	host.updateSegmentRequestInfo = function(requestInfo) {
+	host.updateLicenseRequestInfo = function(requestInfo) {
         // example of setting CORS withCredentials
         // example of setting headers
 		console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
-		if(requestInfo.lc.xh == 1){
-			//requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
-		}
+		requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
     };/**/
 
     host.onError = function () {
@@ -790,14 +788,12 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
                 'mediaElement': this.mediaElement_
             });
 			/***/
-			host.updateSegmentRequestInfo = function(requestInfo) {
+			host.updateLicenseRequestInfo = function(requestInfo) {
 				// example of setting CORS withCredentials
 				// example of setting headers
 				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
-				if(requestInfo.lc.xh == 1){
-					//requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
-				}
+				requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
 			};/***/
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -961,10 +957,11 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     'mediaElement': this.mediaElement_
                 });
 				/***/
-				host.updateSegmentRequestInfo = function(requestInfo) {
+				host.updateLicenseRequestInfo = function(requestInfo) {
 					// example of setting CORS withCredentials
 					// example of setting headers
 					requestInfo.headers = {};
+					requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
 				};/****/
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
