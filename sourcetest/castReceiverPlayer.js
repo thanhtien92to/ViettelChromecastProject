@@ -793,6 +793,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				// example of setting headers
 				console.log('updateSegmentRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
+				requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
 			};/***/
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
