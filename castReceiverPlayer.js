@@ -551,13 +551,15 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
         'url': url,
         'mediaElement': self.mediaElement_
     });
-	/***
-	host.updateSegmentRequestInfo = function(requestInfo) {
+	/***/
+	host.updateLicenseRequestInfo = function(requestInfo) {
         // example of setting CORS withCredentials
         // example of setting headers
+		console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
-		requestInfo.headers['Accept'] = '**';
-        requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+		requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+		//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+		//requestInfo.headers['Origin'] = '*';
     };/**/
 
     host.onError = function () {
@@ -787,14 +789,16 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
                 'url': url,
                 'mediaElement': this.mediaElement_
             });
-			/***
-			host.updateSegmentRequestInfo = function(requestInfo) {
+			/***/
+			host.updateLicenseRequestInfo = function(requestInfo) {
 				// example of setting CORS withCredentials
 				// example of setting headers
+				console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
-				//requestInfo.headers['Accept'] = '**';
-				requestInfo.headers['Access-Control-Allow-Origin'] = '*';
-			};/***/
+				requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+				//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+				//requestInfo.headers['Origin'] = '*';
+			};/**/
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
             this.player_.load(protocolFunc(host));
@@ -956,14 +960,17 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     'url': '',
                     'mediaElement': this.mediaElement_
                 });
-				/***
-				host.updateSegmentRequestInfo = function(requestInfo) {
+				/***/
+				host.updateLicenseRequestInfo = function(requestInfo) {
 					// example of setting CORS withCredentials
 					// example of setting headers
+					console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 					requestInfo.headers = {};
-					requestInfo.headers['Accept'] = '**';
-					requestInfo.headers['Access-Control-Allow-Origin'] = '*';
-				};/****/
+					requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+					//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
+					//requestInfo.headers['Origin'] = '*';
+				};/**/
+				
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
             }
