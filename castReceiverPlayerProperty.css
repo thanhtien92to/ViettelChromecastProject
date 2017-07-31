@@ -11,7 +11,8 @@
 	left: 0px;
 	bottom: 0px;
 	opacity: 0.78;
-	color="#000000"; 
+	color:#000000;
+	position: absolute;
 }
 .vod_poster {
 	width: 117px;
