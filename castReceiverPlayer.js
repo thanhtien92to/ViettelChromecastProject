@@ -687,10 +687,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
         castReceiverPlayer.setInnerText_(titleElement, metadata.title);
 		
 		/* VOD metadata */
-		var vodTitleElement = this.domElement_.querySelector(vodTitle);
-		castReceiverPlayer.setText_(vodTitleElement, metadata.title);
-		var vodSubtitleElement = this.domElement_.querySelector(vodSubtitle);
-		castReceiverPlayer.setText_(vodSubtitleElement, metadata.subtitle);
+		document.getElementById("vodTitle").innerHTML = metadata.title;
+		document.getElementById("vodSubtitle").innerHTML = metadata.subtitle;
 		/* VOD metadata */
 		
         var subtitleElement = this.domElement_.querySelector(mediaSubtitleClassName);
@@ -699,9 +697,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
         var artwork = castReceiverPlayer.getMediaImageUrl_(media);
         if (artwork) {
             var artworkElement = this.domElement_.querySelector(mediaArtworkClassName);
-            castReceiverPlayer.setBackgroundImage_(artworkElement, artwork);
-			var vodPosterElement = this.domElement_.querySelector(vodPoster);
-			castReceiverPlayer.setImage_(artworkElement, artwork);
+            castReceiverPlayer.setBackgroundImage_(artworkElement, artwork);		
+			document.getElementById("vodPoster").src = artwork;
         }
     }
 };
