@@ -69,6 +69,8 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
 	var userLang = navigator.language || navigator.userLanguage; 
 	if(userLang == 'vi'){
 		this.domElement_.setAttribute(domElementArtributeLang,'vi');
+		document.getElementById("vodDirectorTag").innerHTML = "Đạo Diễn";
+		document.getElementById("vodStarTag").innerHTML = "Diễn Viên";
 	}
 	else{
 		this.domElement_.setAttribute(domElementArtributeLang,'en');
