@@ -30,6 +30,12 @@ var controlsTotalTimeClassName = '.controls-total-time';
 var controlsProgressClassName = '.controls-progress';
 var controlsProgressInnerClassName = '.controls-progress-inner';
 var controlsProgressThumbClassName = '.controls-progress-thumb';
+/* VOD infor */
+var vodTitle = '.vod-title';
+var vodDirector = '.vod-director';
+var vodStar = '.vod-star';
+var vodSubtitle = '.vod-subtitle';
+/* (End) VOD infor */
 /* (End) Init querySelector var */
 /* Init Dom Element Artribute var */
 var domElementArtributePreviewMode = 'preview';
