@@ -337,15 +337,15 @@
   display: none;
 }
 
-.media-player-dom[type="video"][state="idle"] .vod_background,
-.media-player-dom[type="video"][state="idle"] .vod_poster,
-.media-player-dom[type="video"][state="idle"] .vod_title,
-.media-player-dom[type="video"][state="idle"] .vod_line,
-.media-player-dom[type="video"][state="idle"] .vod_director_tag,
-.media-player-dom[type="video"][state="idle"] .vod_director,
-.media-player-dom[type="video"][state="idle"] .vod_star_tag,
-.media-player-dom[type="video"][state="idle"] .vod_star,
-.media-player-dom[type="video"][state="idle"] .vod_subtitle {
+.media-player-dom[state="idle"] .vod_background,
+.media-player-dom[state="idle"] .vod_poster,
+.media-player-dom[state="idle"] .vod_title,
+.media-player-dom[state="idle"] .vod_line,
+.media-player-dom[state="idle"] .vod_director_tag,
+.media-player-dom[state="idle"] .vod_director,
+.media-player-dom[state="idle"] .vod_star_tag,
+.media-player-dom[state="idle"] .vod_star,
+.media-player-dom[state="idle"] .vod_subtitle {
 	display: none;
 }
 
@@ -368,15 +368,15 @@
   display: none;
 }
 
-.media-player-dom[type="video"][state="done"] .vod_background,
-.media-player-dom[type="video"][state="done"] .vod_poster,
-.media-player-dom[type="video"][state="done"] .vod_title,
-.media-player-dom[type="video"][state="done"] .vod_line,
-.media-player-dom[type="video"][state="done"] .vod_director_tag,
-.media-player-dom[type="video"][state="done"] .vod_director,
-.media-player-dom[type="video"][state="done"] .vod_star_tag,
-.media-player-dom[type="video"][state="done"] .vod_star,
-.media-player-dom[type="video"][state="done"] .vod_subtitle {
+.media-player-dom[state="done"] .vod_background,
+.media-player-dom[state="done"] .vod_poster,
+.media-player-dom[state="done"] .vod_title,
+.media-player-dom[state="done"] .vod_line,
+.media-player-dom[state="done"] .vod_director_tag,
+.media-player-dom[state="done"] .vod_director,
+.media-player-dom[state="done"] .vod_star_tag,
+.media-player-dom[state="done"] .vod_star,
+.media-player-dom[state="done"] .vod_subtitle {
 	display: none;
 }
 
