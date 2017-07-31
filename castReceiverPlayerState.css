@@ -50,6 +50,17 @@
   margin-bottom: -75px;
   margin-left: -75px;
 }*/
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_background,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_poster,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_title,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_line,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_director_tag,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_director,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_star_tag,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_star,
+.media-player-dom[type="video"][state="launching"][live="true"] .vod_subtitle {
+	display: none;
+}
 .media-player-dom[type="video"][state="launching"] .media-info,
 .media-player-dom[type="video"][state="launching"] .media-artwork {
   display: none;

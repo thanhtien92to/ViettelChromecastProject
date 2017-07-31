@@ -687,9 +687,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 		
 		/* VOD metadata */
 		var vodTitleElement = this.domElement_.querySelector(vodTitle);
-		castReceiverPlayer.setInnerText_(vodTitleElement, metadata.title);
+		castReceiverPlayer.setText_(vodTitleElement, metadata.title);
 		var vodSubtitleElement = this.domElement_.querySelector(vodSubtitle);
-		castReceiverPlayer.setInnerText_(vodSubtitleElement, metadata.subtitle);
+		castReceiverPlayer.setText_(vodSubtitleElement, metadata.subtitle);
 		/* VOD metadata */
 		
         var subtitleElement = this.domElement_.querySelector(mediaSubtitleClassName);
@@ -1511,6 +1511,12 @@ castReceiverPlayer.setInnerText_ = function (element, opt_text) {
         return;
     }
     element.innerText = opt_text || '';
+};
+castReceiverPlayer.setText_ = function (element, opt_text) {
+    if (!element) {
+        return;
+    }
+    element.innerHTML = opt_text || '';
 };
 castReceiverPlayer.setBackgroundImage_ = function (element, opt_url) {
     if (!element) {
