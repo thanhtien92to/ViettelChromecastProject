@@ -684,7 +684,14 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
         var metadata = media.metadata || {};
         var titleElement = this.domElement_.querySelector(mediaTitleClassName);
         castReceiverPlayer.setInnerText_(titleElement, metadata.title);
-
+		
+		/* VOD metadata */
+		var vodTitleElement = this.domElement_.querySelector(vodTitle);
+		castReceiverPlayer.setInnerText_(vodTitleElement, metadata.title);
+		var vodSubtitleElement = this.domElement_.querySelector(vodSubtitle);
+		castReceiverPlayer.setInnerText_(vodSubtitleElement, metadata.subtitle);
+		/* VOD metadata */
+		
         var subtitleElement = this.domElement_.querySelector(mediaSubtitleClassName);
         castReceiverPlayer.setInnerText_(subtitleElement, metadata.subtitle);
 
