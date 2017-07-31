@@ -3,6 +3,10 @@
   font-family: "Roboto-Regular";
   src: url(font/Roboto-Regular.ttf);
 }
+@font-face {
+  font-family: "RixHeadB";
+  src: url(font/Roboto-Regular.ttf);
+}
 
 /** VOD infomation **/
 .vod_background{
@@ -11,7 +15,7 @@
 	left: 0px;
 	bottom: 0px;
 	opacity: 0.78;
-	color:#000000;
+	background-color:#000000;
 	position: absolute;
 }
 .vod_poster {
@@ -19,7 +23,16 @@
 	height: 166px;
 	position: absolute;
 	left: 80px;
-	bottom: 40px;
+	bottom: 50px;
+	font-family: "RixHeadB";
+}
+.vod_title {
+	position: absolute;
+	text-align: left;
+	font-size: 40px;
+	color: #F0F0F0;
+	left: 220px;
+	bottom: 90px;
 }
 /** (End) VOD infomation **/
 
