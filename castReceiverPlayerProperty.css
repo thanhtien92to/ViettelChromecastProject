@@ -3,6 +3,18 @@
   font-family: "Roboto-Regular";
   src: url(font/Roboto-Regular.ttf);
 }
+
+/** VOD infomation **/
+.vod_poster {
+	width: 117px;
+	height: 166px;
+	position: absolute;
+	left: 80px;
+	bottom: 40px;
+}
+
+/** (End) VOD infomation **/
+
 .media-player-dom {
   background-image: url("image/background.jpg");
   background-size: cover;
