@@ -35,6 +35,7 @@ var vodTitle = '.vod-title';
 var vodDirector = '.vod-director';
 var vodStar = '.vod-star';
 var vodSubtitle = '.vod-subtitle';
+var vodPoster = '.vod-poster';
 /* (End) VOD infor */
 /* (End) Init querySelector var */
 /* Init Dom Element Artribute var */
@@ -699,6 +700,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
         if (artwork) {
             var artworkElement = this.domElement_.querySelector(mediaArtworkClassName);
             castReceiverPlayer.setBackgroundImage_(artworkElement, artwork);
+			var vodPosterElement = this.domElement_.querySelector(vodPoster);
+			castReceiverPlayer.setImage_(artworkElement, artwork);
         }
     }
 };
@@ -1523,6 +1526,13 @@ castReceiverPlayer.setBackgroundImage_ = function (element, opt_url) {
         return;
     }
     element.style.backgroundImage = (opt_url ? 'url("' + opt_url.replace(/"/g, '\\"') + '")' : 'none');
+    element.style.display = (opt_url ? '' : 'none');
+};
+castReceiverPlayer.setImage_ = function (element, opt_url) {
+    if (!element) {
+        return;
+    }
+    element.src = (opt_url ? 'url("' + opt_url.replace(/"/g, '\\"') + '")' : 'none');
     element.style.display = (opt_url ? '' : 'none');
 };
 castReceiverPlayer.getExtension_ = function (url) {
