@@ -64,6 +64,7 @@
 .media-player-dom[type="video"][state="loading"][live="true"] .media-artwork {
   width: 120px;
   height: 60px;
+  display: block;
 }
 
 .media-player-dom[type="video"][state="loading"] .media-title,
@@ -80,7 +81,7 @@
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_director,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_star_tag,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_star,
-.media-player-dom[type="video"][state="loading"][live="true"].vod_subtitle {
+.media-player-dom[type="video"][state="loading"][live="true"] .vod_subtitle {
 	display: none;
 }
 
@@ -182,7 +183,7 @@
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_director,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_star_tag,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_star,
-.media-player-dom[type="video"][state="paused"][live="true"].vod_subtitle {
+.media-player-dom[type="video"][state="paused"][live="true"] .vod_subtitle {
 	display: none;
 }
 
