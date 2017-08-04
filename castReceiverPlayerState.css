@@ -112,7 +112,6 @@
 .media-player-dom[type="video"][state="loading"] {
 	/**background-image: url("image/chromcast_bg.jpg");*/
 	background-image: url("image/chrom_cast_iframe1.png");
-	
 }
 .media-player-dom[type="video"][state="loading"] .media-info-show-part{
   display: block;
@@ -356,10 +355,12 @@
   opacity: 1;
 }
 .media-player-dom[state="idle"][lang="en"] {
-	background-image: url("image/background.jpg");
+	/*background-image: url("image/background.jpg");*/
+	background-image: url("image/chrom_cast_iframe1.png");
 }
 .media-player-dom[state="idle"][lang="vi"] {
-	background-image: url("image/background_vi.jpg");
+	/*background-image: url("image/background_vi.jpg");*/
+	background-image: url("image/chrom_cast_iframe1.png");
 }
 .media-player-dom[state="idle"] .chrome-cast-logo {
   display: block;
