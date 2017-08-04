@@ -109,6 +109,10 @@
 	display: none;
 }
 
+.media-player-dom[type="video"][state="loading"][live="true"] {
+	background-image: url("image/chromcast_bg.jpg");
+	/*background-image: url("image/chrom_cast_iframe2.png");*/
+}
 .media-player-dom[type="video"][state="loading"] {
 	/**background-image: url("image/chromcast_bg.jpg");*/
 	background-image: url("image/chrom_cast_iframe2.png");
