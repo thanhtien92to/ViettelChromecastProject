@@ -105,11 +105,14 @@
 .media-player-dom[type="video"][state="loading"] .vod_star_tag,
 .media-player-dom[type="video"][state="loading"] .vod_star,
 .media-player-dom[type="video"][state="loading"] .vod_subtitle {
-	display: block;
+	/*display: block;*/
+	display: none;
 }
 
 .media-player-dom[type="video"][state="loading"] {
-	background-image: url("image/chromcast_bg.jpg");
+	/**background-image: url("image/chromcast_bg.jpg");*/
+	background-image: url("image/chrom_cast_iframe1.jpg");
+	
 }
 .media-player-dom[type="video"][state="loading"] .media-info-show-part{
   display: block;
