@@ -111,7 +111,7 @@
 
 .media-player-dom[type="video"][state="loading"] {
 	/**background-image: url("image/chromcast_bg.jpg");*/
-	background-image: url("image/chrom_cast_iframe1.jpg");
+	background-image: url("image/chrom_cast_iframe1.png");
 	
 }
 .media-player-dom[type="video"][state="loading"] .media-info-show-part{
