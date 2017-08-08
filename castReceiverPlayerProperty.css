@@ -49,7 +49,8 @@
 	font-size: 28px;
 	color: #F5F5F5;
 	left: 26%;
-	bottom: 36%;
+	bottom: 40%;
+	height: 0px;
 	font-family: "RixHeadB";
 }
 .vod_like_icon {
@@ -61,8 +62,9 @@
 }
 .vod_likes_number {
 	position: absolute;
-	left: 280px;
-	bottom: 154px;
+	left: 28%;
+    height: 0px;
+    bottom: 37%;
 	color: #7A8ABE;
 	text-align: left;
 	font-size: 18px;
@@ -70,8 +72,9 @@
 }
 .vod_year {
 	position: absolute;
-	left: 344px;
-	bottom: 154px;
+	left: 35%;
+    bottom: 37%;
+    height: 0px;
 	color: #787878;
 	text-align: left;
 	font-size: 18px;
@@ -79,8 +82,9 @@
 }
 .vod_genres {
 	position: absolute;
-	left: 420px;
-	bottom: 154px;
+	left: 41%;
+    bottom: 37%;
+    height: 0px;
 	color: #787878;
 	text-align: left;
 	font-size: 18px;
@@ -90,32 +94,32 @@
 	position: absolute;
 	width: 30px;
 	height: 15px;
-	left: 610px;
-	bottom: 176px;
+	left: 60%;
+    bottom: 37%;
 }
 .vod_line_1 {
 	position: absolute;
-	left: 256px;
-	bottom: 165px;
+	left: 26%;
+    bottom: 35%;
 	background-color: #FFFFFF;
-	width: 75%;
+	width: 64%;
 	height: 2px;
 	opacity: 0.14;
 }
 .vod_line_2 {
 	position: absolute;
-	left: 256px;
-	bottom: 50px;
+	left: 26%;
+	bottom: 11%;
 	background-color: #FFFFFF;
-	width: 75%;
+	width: 64%;
 	height: 2px;
 	opacity: 0.14;
 }
 
 .vod_line_3 {
 	position: absolute;
-	left: 330px;
-	bottom: 176px;
+	left: 34%;
+    bottom: 37%;
 	background-color: #E0E0E0;
 	width: 2px;
 	height: 14px;
@@ -124,8 +128,8 @@
 
 .vod_line_4 {
 	position: absolute;
-	left: 400px;
-	bottom: 176px;
+    left: 40%;
+    bottom: 37%;
 	background-color: #DFDFDF;
 	width: 2px;
 	height: 14px;
@@ -138,8 +142,8 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 256px;
-	bottom: 120px;
+	left: 26%;
+    bottom: 28%;
 	text-decoration: underline;
 }
 .vod_director{
@@ -148,11 +152,11 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 340px;
+	left: 32%;
 	width: 130px;
 	overflow: hidden;
 	height: 20px;
-	bottom: 120px;
+	bottom: 28%;
 	text-overflow: clip;
 }
 .vod_star_tag{
@@ -161,8 +165,8 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 496px;
-	bottom: 120px;
+	left: 44%;
+    bottom: 28%;
 	text-decoration: underline;
 }
 .vod_star{
@@ -171,11 +175,11 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 582px;
+	left: 50%;
 	overflow: hidden;
 	height: 20px;
 	width: 60%;
-	bottom: 120px;
+	bottom: 28%;
 	text-overflow: clip;
 }
 .vod_subtitle{
@@ -184,11 +188,11 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 256px;
+	left: 26%;
 	overflow: hidden;
 	height: 59px;
-	width: 75%;
-	bottom: 50px;
+	width: 64%;
+	bottom: 18%;
 	text-overflow: clip;
 }
 /** (End) VOD infomation **/
