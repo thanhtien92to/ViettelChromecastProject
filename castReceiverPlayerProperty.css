@@ -42,16 +42,16 @@
 	font-size: 28px;
 	color: #F5F5F5;
 	left: 256px;
-	bottom: 150px;
+	bottom: 180px;
 }
 .vod_line {
 	position: absolute;
-	left: 220px;
-	bottom: 130px;
-	background-color: #FFFFFF;
-	width: 80%;
+	left: 256px;
+	bottom: 180px;
+	background-color: #7BA4A2;
+	width: 75%;
 	height: 3px;
-	opacity: 0.2;
+	opacity: 0.6;
 }
 
 .vod_director_tag{
