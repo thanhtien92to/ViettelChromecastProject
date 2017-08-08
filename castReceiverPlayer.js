@@ -718,8 +718,14 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 		if( metadata.CAST_INFO_PRODUCTION_YEAR!=undefined ){
 			document.getElementById("vodYear").innerHTML = metadata.CAST_INFO_PRODUCTION_YEAR;
 		}
+		else{
+			document.getElementById("vodYear").innerHTML = '____';
+		}
 		if( metadata.CAST_INFO_GENRES!=undefined ){
 			document.getElementById("vodGenres").innerHTML = metadata.CAST_INFO_GENRES;
+		}
+		else {
+			document.getElementById("vodGenres").innerHTML = '';
 		}
 		/* VOD metadata */
 		
