@@ -49,15 +49,15 @@
 	font-size: 28px;
 	color: #F5F5F5;
 	left: 26%;
-	bottom: 41%;
+	bottom: 36%;
 	font-family: "RixHeadB";
 }
 .vod_like_icon {
 	position: absolute;
 	width: 14px;
 	height: 13px;
-	left: 256px;
-	bottom: 176px;
+	left: 26%;
+	bottom: 37%;
 }
 .vod_likes_number {
 	position: absolute;
