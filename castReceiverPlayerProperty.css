@@ -42,26 +42,35 @@
 	font-size: 28px;
 	color: #F5F5F5;
 	left: 256px;
-	bottom: 180px;
+	bottom: 165px;
 }
-.vod_line {
+.vod_line_1 {
 	position: absolute;
 	left: 256px;
 	bottom: 180px;
-	background-color: #7BA4A2;
+	background-color: #FFFFFF;
 	width: 75%;
-	height: 3px;
-	opacity: 0.6;
+	height: 2px;
+	opacity: 0.14;
+}
+.vod_line_2 {
+	position: absolute;
+	left: 256px;
+	bottom: 50px;
+	background-color: #FFFFFF;
+	width: 75%;
+	height: 2px;
+	opacity: 0.14;
 }
 
 .vod_director_tag{
 	position: absolute;
-	color:#AAAAAA;
+	color:#7BA4A2;
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 220px;
-	bottom: 80px;
+	left: 256px;
+	bottom: 120px;
 	text-decoration: underline;
 }
 .vod_director{
@@ -79,12 +88,12 @@
 }
 .vod_star_tag{
 	position: absolute;
-	color:#AAAAAA;
+	color:#7BA4A2;
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 450px;
-	bottom: 80px;
+	left: 496px;
+	bottom: 120pxpx;
 	text-decoration: underline;
 }
 .vod_star{
