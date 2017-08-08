@@ -47,7 +47,7 @@
 .vod_line_1 {
 	position: absolute;
 	left: 256px;
-	bottom: 180px;
+	bottom: 165px;
 	background-color: #FFFFFF;
 	width: 75%;
 	height: 2px;
@@ -111,15 +111,15 @@
 }
 .vod_subtitle{
 	position: absolute;
-	color:#F0F0F0;
+	color:#787878;
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 220px;
+	left: 256px;
 	overflow: hidden;
-	height: 50px;
-	width: 80%;
-	bottom: 20px;
+	height: 59px;
+	width: 75%;
+	bottom: 50px;
 	text-overflow: clip;
 }
 /** (End) VOD infomation **/
