@@ -152,11 +152,11 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 300px;
+	left: 340px;
 	width: 130px;
 	overflow: hidden;
 	height: 20px;
-	bottom: 80px;
+	bottom: 120px;
 	text-overflow: clip;
 }
 .vod_star_tag{
@@ -175,11 +175,11 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 500px;
+	left: 582px;
 	overflow: hidden;
 	height: 20px;
 	width: 60%;
-	bottom: 80px;
+	bottom: 120px;
 	text-overflow: clip;
 }
 .vod_subtitle{
