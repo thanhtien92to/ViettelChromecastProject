@@ -105,8 +105,8 @@
 .media-player-dom[type="video"][state="loading"] .vod_star_tag,
 .media-player-dom[type="video"][state="loading"] .vod_star,
 .media-player-dom[type="video"][state="loading"] .vod_subtitle {
-	/*display: block;*/
-	display: none;
+	/**/display: block;/**/
+	/**display: none;/**/
 }
 
 .media-player-dom[type="video"][state="loading"][live="true"] {
