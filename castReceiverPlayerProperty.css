@@ -84,21 +84,21 @@
 
 .vod_line_3 {
 	position: absolute;
-	left: 300px;
-	bottom: 180px;
+	left: 330px;
+	bottom: 176px;
 	background-color: #E0E0E0;
 	width: 2px;
-	height: 12px;
+	height: 14px;
 	opacity: 0.14;
 }
 
 .vod_line_4 {
 	position: absolute;
-	left: 330px;
-	bottom: 180px;
+	left: 400px;
+	bottom: 176px;
 	background-color: #DFDFDF;
 	width: 2px;
-	height: 12px;
+	height: 14px;
 	opacity: 0.14;
 }
 
