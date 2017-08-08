@@ -19,6 +19,11 @@
 .vod_star,
 .vod_subtitle,
 .vod_like_icon ,
+.vod_year,
+.vod_genres,
+.vod_hot_type_icon,
+.vod_line_3,
+.vod_line_4,
 .vod_likes_number {
 	display: none;
 }
@@ -59,15 +64,6 @@
 	left: 280px;
 	bottom: 154px;
 	color: #7A8ABE;
-	text-align: left;
-	font-size: 18px;
-	font-family: "RixHeadB";
-}
-.vod_year {
-	position: absolute;
-	left: 250px;
-	bottom: 154px;
-	color: #787878;
 	text-align: left;
 	font-size: 18px;
 	font-family: "RixHeadB";
