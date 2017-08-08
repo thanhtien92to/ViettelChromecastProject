@@ -18,7 +18,8 @@
 .vod_star_tag,
 .vod_star,
 .vod_subtitle,
-.vod_like_icon {
+.vod_like_icon ,
+.vod_likes_number {
 	display: none;
 }
 .vod_background{
@@ -52,6 +53,15 @@
 	height: 13px;
 	left: 256px;
 	bottom: 176px;
+}
+.vod_likes_number {
+	position: absolute;
+	left: 282px;
+	bottom: 150px;
+	color: #7A8ABE;
+	text-align: left;
+	font-size: 28px;
+	font-family: "RixHeadB";
 }
 .vod_line_1 {
 	position: absolute;
