@@ -56,11 +56,11 @@
 }
 .vod_likes_number {
 	position: absolute;
-	left: 282px;
-	bottom: 150px;
+	left: 280px;
+	bottom: 154px;
 	color: #7A8ABE;
 	text-align: left;
-	font-size: 28px;
+	font-size: 18px;
 	font-family: "RixHeadB";
 }
 .vod_line_1 {
@@ -79,6 +79,26 @@
 	background-color: #FFFFFF;
 	width: 75%;
 	height: 2px;
+	opacity: 0.14;
+}
+
+.vod_line_3 {
+	position: absolute;
+	left: 300px;
+	bottom: 180px;
+	background-color: #E0E0E0;
+	width: 2px;
+	height: 12px;
+	opacity: 0.14;
+}
+
+.vod_line_4 {
+	position: absolute;
+	left: 330px;
+	bottom: 180px;
+	background-color: #E0E0E0;
+	width: 2px;
+	height: 12px;
 	opacity: 0.14;
 }
 
