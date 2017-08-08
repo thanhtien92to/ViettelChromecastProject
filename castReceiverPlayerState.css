@@ -50,6 +50,7 @@
   margin-bottom: -75px;
   margin-left: -75px;
 }*/
+ 
 .media-player-dom[type="video"][state="launching"] .vod_background,
 .media-player-dom[type="video"][state="launching"] .vod_poster,
 .media-player-dom[type="video"][state="launching"] .vod_title,
@@ -58,6 +59,9 @@
 .media-player-dom[type="video"][state="launching"] .vod_director,
 .media-player-dom[type="video"][state="launching"] .vod_star_tag,
 .media-player-dom[type="video"][state="launching"] .vod_star,
+.media-player-dom[type="video"][state="launching"] .vod_line_1,
+.media-player-dom[type="video"][state="launching"] .vod_line_2,
+.media-player-dom[type="video"][state="launching"] .vod_like_icon,
 .media-player-dom[type="video"][state="launching"] .vod_subtitle {
 	display: none;
 }
@@ -92,6 +96,9 @@
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_director,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_star_tag,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_star,
+.media-player-dom[type="video"][state="loading"][live="true"] .vod_line_1,
+.media-player-dom[type="video"][state="loading"][live="true"] .vod_line_2,
+.media-player-dom[type="video"][state="loading"][live="true"] .vod_like_icon,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_subtitle {
 	display: none;
 }
@@ -104,7 +111,11 @@
 .media-player-dom[type="video"][state="loading"] .vod_director,
 .media-player-dom[type="video"][state="loading"] .vod_star_tag,
 .media-player-dom[type="video"][state="loading"] .vod_star,
-.media-player-dom[type="video"][state="loading"] .vod_subtitle {
+.media-player-dom[type="video"][state="loading"] .vod_line_1,
+.media-player-dom[type="video"][state="loading"] .vod_line_2,
+.media-player-dom[type="video"][state="loading"] .vod_like_icon,
+.media-player-dom[type="video"][state="loading"] .vod_subtitle 
+{
 	/**/display: block;/**/
 	/**display: none;/**/
 }
@@ -200,6 +211,9 @@
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_director,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_star_tag,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_star,
+.media-player-dom[type="video"][state="paused"][live="true"] .vod_line_1,
+.media-player-dom[type="video"][state="paused"][live="true"] .vod_line_2,
+.media-player-dom[type="video"][state="paused"][live="true"] .vod_like_icon,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_subtitle {
 	display: none;
 }
@@ -218,6 +232,9 @@
 .media-player-dom[type="video"][state="paused"] .vod_director,
 .media-player-dom[type="video"][state="paused"] .vod_star_tag,
 .media-player-dom[type="video"][state="paused"] .vod_star,
+.media-player-dom[type="video"][state="paused"] .vod_line_1,
+.media-player-dom[type="video"][state="paused"] .vod_line_2,
+.media-player-dom[type="video"][state="paused"] .vod_like_icon,
 .media-player-dom[type="video"][state="paused"] .vod_subtitle {
 	display: block;
 }
@@ -285,6 +302,9 @@
 .media-player-dom[type="video"][state="playing"] .vod_director,
 .media-player-dom[type="video"][state="playing"] .vod_star_tag,
 .media-player-dom[type="video"][state="playing"] .vod_star,
+.media-player-dom[type="video"][state="playing"] .vod_line_1,
+.media-player-dom[type="video"][state="playing"] .vod_line_2,
+.media-player-dom[type="video"][state="playing"] .vod_like_icon,
 .media-player-dom[type="video"][state="playing"] .vod_subtitle {
 	display: none;
 }
@@ -351,6 +371,9 @@
 .media-player-dom[state="idle"] .vod_director,
 .media-player-dom[state="idle"] .vod_star_tag,
 .media-player-dom[state="idle"] .vod_star,
+.media-player-dom[state="idle"] .vod_line_1,
+.media-player-dom[state="idle"] .vod_line_2,
+.media-player-dom[state="idle"] .vod_like_icon,
 .media-player-dom[state="idle"] .vod_subtitle {
 	display: none;
 }
@@ -384,6 +407,9 @@
 .media-player-dom[state="done"] .vod_director,
 .media-player-dom[state="done"] .vod_star_tag,
 .media-player-dom[state="done"] .vod_star,
+.media-player-dom[state="done"] .vod_line_1,
+.media-player-dom[state="done"] .vod_line_2,
+.media-player-dom[state="done"] .vod_like_icon,
 .media-player-dom[state="done"] .vod_subtitle {
 	display: none;
 }
