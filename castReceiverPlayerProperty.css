@@ -63,6 +63,33 @@
 	font-size: 18px;
 	font-family: "RixHeadB";
 }
+.vod_year {
+	position: absolute;
+	left: 250px;
+	bottom: 154px;
+	color: #787878;
+	text-align: left;
+	font-size: 18px;
+	font-family: "RixHeadB";
+}
+.vod_year {
+	position: absolute;
+	left: 250px;
+	bottom: 154px;
+	color: #787878;
+	text-align: left;
+	font-size: 18px;
+	font-family: "RixHeadB";
+}
+.vod_genres {
+	position: absolute;
+	left: 430px;
+	bottom: 154px;
+	color: #787878;
+	text-align: left;
+	font-size: 18px;
+	font-family: "RixHeadB";
+}
 .vod_line_1 {
 	position: absolute;
 	left: 256px;
