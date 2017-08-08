@@ -691,7 +691,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 		/* VOD metadata */
 		document.getElementById("vodTitle").innerHTML = metadata.title;
 		document.getElementById("vodSubtitle").innerHTML = metadata.subtitle;
-		if((metadata.CAST_INFO_DIRECTOR||{})){
+		if(metadata.CAST_INFO_DIRECTOR!=undefined){
 			document.getElementById("vodDirector").innerHTML = metadata.CAST_INFO_DIRECTOR;
 		}
 		else{
@@ -703,7 +703,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 				document.getElementById("vodDirector").innerHTML = 'Updating';
 			}
 		}
-		if((metadata.CAST_INFO_STAR||{})){
+		if(metadata.CAST_INFO_STAR!=undefined){
 			document.getElementById("vodStar").innerHTML = metadata.CAST_INFO_STAR;
 		}
 		else{
@@ -715,10 +715,10 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 				document.getElementById("vodStar").innerHTML = 'Updating';
 			}
 		}
-		if( (metadata.CAST_INFO_PRODUCTION_YEAR||{}) ){
+		if( metadata.CAST_INFO_PRODUCTION_YEAR!=undefined ){
 			document.getElementById("vodYear").innerHTML = metadata.CAST_INFO_PRODUCTION_YEAR;
 		}
-		if((metadata.CAST_INFO_GENRES||{})){
+		if( metadata.CAST_INFO_GENRES!=undefined ){
 			document.getElementById("vodGenres").innerHTML = metadata.CAST_INFO_GENRES;
 		}
 		/* VOD metadata */
