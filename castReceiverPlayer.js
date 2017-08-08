@@ -704,7 +704,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 			}
 		}
 		if((metadata.CAST_INFO_STAR||{})){
-			document.getElementById("vodStar").innerHTML = metadata.CAST_INFOR_STAR;
+			document.getElementById("vodStar").innerHTML = metadata.CAST_INFO_STAR;
 		}
 		else{
 			var userLang = navigator.language || navigator.userLanguage; 
