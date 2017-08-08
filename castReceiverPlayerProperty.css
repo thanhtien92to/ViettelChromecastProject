@@ -74,7 +74,7 @@
 }
 .vod_year {
 	position: absolute;
-	left: 250px;
+	left: 344px;
 	bottom: 154px;
 	color: #787878;
 	text-align: left;
@@ -83,12 +83,19 @@
 }
 .vod_genres {
 	position: absolute;
-	left: 430px;
+	left: 420px;
 	bottom: 154px;
 	color: #787878;
 	text-align: left;
 	font-size: 18px;
 	font-family: "RixHeadB";
+}
+.vod_hot_type_icon {
+	position: absolute;
+	width: 30px;
+	height: 15px;
+	left: 500px;
+	bottom: 176px;
 }
 .vod_line_1 {
 	position: absolute;
