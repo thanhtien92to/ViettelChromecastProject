@@ -39,10 +39,10 @@
 .vod_title {
 	position: absolute;
 	text-align: left;
-	font-size: 32px;
-	color: #F0F0F0;
-	left: 220px;
-	bottom: 110px;
+	font-size: 28px;
+	color: #F5F5F5;
+	left: 256px;
+	bottom: 150px;
 }
 .vod_line {
 	position: absolute;
