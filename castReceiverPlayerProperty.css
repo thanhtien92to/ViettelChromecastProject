@@ -35,7 +35,6 @@
 	position: absolute;
 	left: 95px;
 	bottom: 50px;
-	font-family: "RixHeadB";
 }
 .vod_title {
 	position: absolute;
@@ -44,6 +43,14 @@
 	color: #F5F5F5;
 	left: 256px;
 	bottom: 165px;
+	font-family: "RixHeadB";
+}
+.like_icon {
+	position: absolute;
+	width: 14px;
+	height: 13px;
+	left: 256px;
+	bottom: 150px;
 }
 .vod_line_1 {
 	position: absolute;
