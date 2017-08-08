@@ -715,11 +715,17 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 				document.getElementById("vodStar").innerHTML = 'Updating';
 			}
 		}
+		if(metadata.CAST_INFO_LIKES!=undefined){
+			document.getElementById("vodlikesNumber").innerHTML = metadata.CAST_INFO_LIKES;
+		}
+		else{
+			document.getElementById("vodlikesNumber").innerHTML = '0';
+		}
 		if( metadata.CAST_INFO_PRODUCTION_YEAR!=undefined ){
 			document.getElementById("vodYear").innerHTML = metadata.CAST_INFO_PRODUCTION_YEAR;
 		}
 		else{
-			document.getElementById("vodYear").innerHTML = '____';
+			document.getElementById("vodYear").innerHTML = '0000';
 		}
 		if( metadata.CAST_INFO_GENRES!=undefined ){
 			document.getElementById("vodGenres").innerHTML = metadata.CAST_INFO_GENRES;
