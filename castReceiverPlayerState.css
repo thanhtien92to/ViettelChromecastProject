@@ -67,6 +67,7 @@
 .media-player-dom[type="video"][state="launching"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="launching"] .vod_line_3,
 .media-player-dom[type="video"][state="launching"] .vod_line_4,
+.media-player-dom[type="video"][state="launching"] .vod_likes_number,
 .media-player-dom[type="video"][state="launching"] .vod_subtitle {
 	display: none;
 }
@@ -109,6 +110,7 @@
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_line_3,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_line_4,
+.media-player-dom[type="video"][state="loading"][live="true"] .vod_likes_number,
 .media-player-dom[type="video"][state="loading"][live="true"] .vod_subtitle {
 	display: none;
 }
@@ -129,6 +131,7 @@
 .media-player-dom[type="video"][state="loading"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="loading"] .vod_line_3,
 .media-player-dom[type="video"][state="loading"] .vod_line_4,
+.media-player-dom[type="video"][state="loading"] .vod_likes_number,
 .media-player-dom[type="video"][state="loading"] .vod_subtitle 
 {
 	/**/display: block;/**/
@@ -234,6 +237,7 @@
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_line_3,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_line_4,
+.media-player-dom[type="video"][state="paused"][live="true"] .vod_likes_number,
 .media-player-dom[type="video"][state="paused"][live="true"] .vod_subtitle {
 	display: none;
 }
@@ -260,6 +264,7 @@
 .media-player-dom[type="video"][state="paused"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="paused"] .vod_line_3,
 .media-player-dom[type="video"][state="paused"] .vod_line_4,
+.media-player-dom[type="video"][state="paused"] .vod_likes_number,
 .media-player-dom[type="video"][state="paused"] .vod_subtitle {
 	display: block;
 }
@@ -335,6 +340,7 @@
 .media-player-dom[type="video"][state="playing"] .vod_hot_type_icon,
 .media-player-dom[type="video"][state="playing"] .vod_line_3,
 .media-player-dom[type="video"][state="playing"] .vod_line_4,
+.media-player-dom[type="video"][state="playing"] .vod_likes_number,
 .media-player-dom[type="video"][state="playing"] .vod_subtitle {
 	display: none;
 }
@@ -409,6 +415,7 @@
 .media-player-dom[state="idle"] .vod_hot_type_icon,
 .media-player-dom[state="idle"] .vod_line_3,
 .media-player-dom[state="idle"] .vod_line_4,
+.media-player-dom[state="idle"] .vod_likes_number,
 .media-player-dom[state="idle"] .vod_subtitle {
 	display: none;
 }
@@ -450,6 +457,7 @@
 .media-player-dom[state="done"] .vod_hot_type_icon,
 .media-player-dom[state="done"] .vod_line_3,
 .media-player-dom[state="done"] .vod_line_4,
+.media-player-dom[state="done"] .vod_likes_number,
 .media-player-dom[state="done"] .vod_subtitle {
 	display: none;
 }
