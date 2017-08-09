@@ -738,7 +738,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 				document.getElementById("vodHotTypeIcon").src = 'image/icon_new.png';
 				document.getElementById("vodHotTypeIcon").visibility = 'visible';
 			}
-			else if(metadata.CAST_INFO_HOT == 1){
+			else if(metadata.CAST_INFO_HOT == 2){
 				document.getElementById("vodHotTypeIcon").src = 'image/icon_hot.png';
 				document.getElementById("vodHotTypeIcon").visibility = 'visible';
 			}

@@ -96,6 +96,7 @@
 	height: 15px;
 	left: 60%;
     bottom: 37%;
+	visibility: hidden;
 }
 .vod_line_1 {
 	position: absolute;
