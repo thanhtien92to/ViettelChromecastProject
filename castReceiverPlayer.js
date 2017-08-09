@@ -735,19 +735,19 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 		}
 		if( metadata.CAST_INFO_HOT!=undefined ){
 			if(metadata.CAST_INFO_HOT == 1){
-				document.getElementById("vod_hot_type_icon").src = 'image/icon_new.png';
-				document.getElementById("vod_hot_type_icon").visibility = 'visible';
+				document.getElementById("vodHotTypeIcon").src = 'image/icon_new.png';
+				document.getElementById("vodHotTypeIcon").visibility = 'visible';
 			}
 			else if(metadata.CAST_INFO_HOT == 1){
-				document.getElementById("vod_hot_type_icon").src = 'image/icon_hot.png';
-				document.getElementById("vod_hot_type_icon").visibility = 'visible';
+				document.getElementById("vodHotTypeIcon").src = 'image/icon_hot.png';
+				document.getElementById("vodHotTypeIcon").visibility = 'visible';
 			}
 			else{
-				document.getElementById("vod_hot_type_icon").visibility = 'hidden';
+				document.getElementById("vodHotTypeIcon").visibility = 'hidden';
 			}
 		}
 		else{
-			document.getElementById("vod_hot_type_icon").visibility = 'hidden';
+			document.getElementById("vodHotTypeIcon").visibility = 'hidden';
 		}
 		/* VOD metadata */
 		
