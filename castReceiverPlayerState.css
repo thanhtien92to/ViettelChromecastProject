@@ -1,7 +1,12 @@
 /*Define webkit animation*/
 @-webkit-keyframes progress-rotating {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+  0% { background-image: url("image/loading_01.png"); }
+  16.67% { background-image: url("image/loading_02.png"); }
+  33.33% { background-image: url("image/loading_03.png"); }
+  50% { background-image: url("image/loading_04.png"); }
+  66.67% { background-image: url("image/loading_05.png"); }
+  83.33% { background-image: url("image/loading_06.png"); }
+  100% { background-image: url("image/loading_01.png"); }
 }
 @-webkit-keyframes progress-ltr-loading{
   0% { margin-left: -100%; }
@@ -161,10 +166,9 @@
   width: 100% !important;
   -webkit-animation: progress-ltr-loading 2s infinite linear;
 }*/
-.media-player-dom[type="video"][state="loading"] .controls-play-pause {
+.media-player-dom[type="video"][state="loading"] .controls-play-pause-loading {
   display: block;
   visibility: visible;
-  background-image: url("image/bufferingProgess.png");
   -webkit-animation: progress-rotating 1s infinite linear;
 }
 
@@ -187,10 +191,9 @@
 .media-player-dom[type="video"][state="buffering"] .shadow-effect {
   opacity: 0.6;
 }
-.media-player-dom[type="video"][state="buffering"] .controls-play-pause {
+.media-player-dom[type="video"][state="buffering"] .controls-play-pause-loading {
   display: block;
   visibility: visible;
-  background-image: url("image/bufferingProgess.png");
   -webkit-animation: progress-rotating 1s infinite linear;
 }
 .media-player-dom[type="video"][state="buffering"] .media-artwork,
