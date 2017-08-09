@@ -46,9 +46,9 @@
 .vod_title_div {
 	position: absolute;
 	left: 26%;
-	width: 64%;
 	bottom: 40%;
-	height: 28px;
+    height: 32px;
+    overflow: hidden;
 	text-overflow: ellipsis;
 }
 .vod_title {
@@ -58,7 +58,6 @@
 	font-size: 28px;
 	color: #F5F5F5;
 	left: 0%;
-	bottom: 0%;
 	height: 0px;
 	font-family: "RixHeadB";
 	text-overflow: ellipsis;
@@ -168,6 +167,8 @@
 	overflow: hidden;
 	height: 20px;
 	bottom: 28%;
+	overflow-x: hidden;
+    overflow-y: hidden;
 	text-overflow: clip;
 }
 .vod_star_tag{
@@ -190,6 +191,8 @@
 	height: 20px;
 	width: 60%;
 	bottom: 28%;
+	overflow-x: hidden;
+    overflow-y: hidden;
 	text-overflow: clip;
 }
 .vod_subtitle{
@@ -202,6 +205,8 @@
 	height: 59px;
 	width: 64%;
 	bottom: 18%;
+	overflow-x: hidden;
+    overflow-y: hidden;
 	text-overflow: clip;
 }
 /** (End) VOD infomation **/
