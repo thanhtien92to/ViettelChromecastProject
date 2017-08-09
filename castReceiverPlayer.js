@@ -733,6 +733,22 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadMetadata_ = function (media) {
 		else {
 			document.getElementById("vodGenres").innerHTML = '';
 		}
+		if( metadata.CAST_INFO_HOT!=undefined ){
+			if(metadata.CAST_INFO_HOT == 1){
+				document.getElementById("vod_hot_type_icon").src = 'image/icon_new.png';
+				document.getElementById("vod_hot_type_icon").visibility = 'visible';
+			}
+			else if(metadata.CAST_INFO_HOT == 1){
+				document.getElementById("vod_hot_type_icon").src = 'image/icon_hot.png';
+				document.getElementById("vod_hot_type_icon").visibility = 'visible';
+			}
+			else{
+				document.getElementById("vod_hot_type_icon").visibility = 'hidden';
+			}
+		}
+		else{
+			document.getElementById("vod_hot_type_icon").visibility = 'hidden';
+		}
 		/* VOD metadata */
 		
         var subtitleElement = this.domElement_.querySelector(mediaSubtitleClassName);
