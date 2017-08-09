@@ -43,7 +43,16 @@
 	left: 10%;
 	bottom: 11%;
 }
+.vod_title_div {
+	position: absolute;
+	left: 26%;
+	width: 64%;
+	bottom: 40%;
+	height: 28px;
+	text-overflow: ellipsis;
+}
 .vod_title {
+	margin: auto;
 	position: absolute;
 	text-align: left;
 	font-size: 28px;
@@ -52,6 +61,7 @@
 	bottom: 40%;
 	height: 0px;
 	font-family: "RixHeadB";
+	text-overflow: ellipsis;
 }
 .vod_like_icon {
 	position: absolute;
@@ -177,7 +187,6 @@
 	font-size: 16px;
 	text-align: left;
 	left: 50%;
-	overflow: hidden;
 	height: 20px;
 	width: 60%;
 	bottom: 28%;
@@ -190,7 +199,6 @@
 	font-size: 16px;
 	text-align: left;
 	left: 26%;
-	overflow: hidden;
 	height: 59px;
 	width: 64%;
 	bottom: 18%;
