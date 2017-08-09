@@ -47,6 +47,7 @@
 	position: absolute;
 	left: 26%;
 	bottom: 40%;
+	width: 64%;
     height: 32px;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -189,7 +190,7 @@
 	text-align: left;
 	left: 50%;
 	height: 20px;
-	width: 60%;
+	width: 40%;
 	bottom: 28%;
 	overflow-x: hidden;
     overflow-y: hidden;
