@@ -249,7 +249,8 @@
   right: 0;
   top: 0;
   display: none;
-  opacity: 0.6;
+  opacity: 1;
+  background-color: #000000;
   background-image: url("image/bottomShadowEffect.png");
   background-size: cover;
   background-position: center;

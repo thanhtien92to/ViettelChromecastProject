@@ -189,7 +189,7 @@
   display: block;
 }
 .media-player-dom[type="video"][state="buffering"] .shadow-effect {
-  opacity: 0.6;
+  opacity: 1;
 }
 .media-player-dom[type="video"][state="buffering"] .controls-play-pause-loading {
   display: block;
@@ -317,7 +317,7 @@
   opacity: 1;
 }
 .media-player-dom[type="video"][state="paused"] .shadow-effect {
-  opacity: 0.6;
+  opacity: 1;
 }
 /* (End) player type = video, state = paused*/
 
