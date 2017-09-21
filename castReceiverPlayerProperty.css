@@ -68,13 +68,13 @@
 	width: 14px;
 	height: 13px;
 	left: 26%;
-	bottom: 37%;
+	bottom: 36%;
 }
 
 .vod_likes_number_div{
 	position: absolute;
 	left: 28%;
-	bottom: 37%;
+	bottom: 36%;
 	width: 5%;
     height: 18px;
     overflow: hidden;
@@ -96,9 +96,9 @@
 .vod_year_div{
 	position: absolute;
 	left: 35%;
-	bottom: 37%;
+	bottom: 36%;
     height: 18px;
-	width: 4%;
+	width: 5%;
     overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -116,7 +116,7 @@
 .vod_genres_div{
 	position: absolute;
 	left: 41%;
-	bottom: 37%;
+	bottom: 36%;
 	width: 20%;
     height: 20px;
     overflow: hidden;
@@ -140,13 +140,13 @@
 	width: 30px;
 	height: 15px;
 	left: 60%;
-    bottom: 37%;
+    bottom: 36%;
 	visibility: hidden;
 }
 .vod_line_1 {
 	position: absolute;
 	left: 26%;
-    bottom: 35%;
+    bottom: 34%;
 	background-color: #FFFFFF;
 	width: 64%;
 	height: 2px;
@@ -165,7 +165,7 @@
 .vod_line_3 {
 	position: absolute;
 	left: 34%;
-    bottom: 37%;
+    bottom: 36%;
 	background-color: #E0E0E0;
 	width: 2px;
 	height: 14px;
@@ -175,7 +175,7 @@
 .vod_line_4 {
 	position: absolute;
     left: 40%;
-    bottom: 37%;
+    bottom: 36%;
 	background-color: #DFDFDF;
 	width: 2px;
 	height: 14px;
@@ -186,7 +186,7 @@
 	position: absolute;
 	left: 26%;
 	width: 6%;
-	bottom: 31%;
+	bottom: 29%;
     height: 20px;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -206,7 +206,7 @@
 .vod_director_div{
 	position: absolute;
 	left: 32%;
-	bottom: 31%;
+	bottom: 29%;
     height: 20px;
 	width: 10%;
     overflow: hidden;
@@ -230,7 +230,7 @@
 .vod_star_tag_div{
 	position: absolute;
 	left: 44%;
-	bottom: 31%;
+	bottom: 29%;
     height: 20px;
     overflow: hidden;
 	width: 6%;
@@ -249,7 +249,7 @@
 .vod_star_div{
 	position: absolute;
 	left: 50%;
-	bottom: 31%;
+	bottom: 29%;
     height: 20px;
 	width: 40%;
     overflow: hidden;
@@ -271,7 +271,7 @@
 .vod_subtitle_div{
 	position: absolute;
 	left: 26%;
-	bottom: 21%;
+	bottom: 18%;
     height: 59px;
 	width: 64%;
     overflow: hidden;
@@ -475,7 +475,7 @@
 /*#controlsPlayPauseSpan{*/
   position: absolute;
   background-size: cover;
-  bottom: 50%;
+  bottom: 54%;
   left: 50%;
   width: 150px;
   height: 150px;
@@ -488,7 +488,7 @@
 /*#controlsPlayPauseSpan{*/
   position: absolute;
   background-size: cover;
-  bottom: 50%;
+  bottom: 52%;
   left: 50%;
   width: 100px;
   height: 100px;
