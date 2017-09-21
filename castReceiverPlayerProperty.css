@@ -70,35 +70,67 @@
 	left: 26%;
 	bottom: 37%;
 }
-.vod_likes_number {
+
+.vod_likes_number_div{
 	position: absolute;
 	left: 28%;
-    height: 0px;
-    bottom: 37%;
-	color: #7A8ABE;
+	bottom: 37%;
+    height: 22px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.vod_likes_number {
+	position: absolute;
+	margin: auto;
 	text-align: left;
+	left: 0%;
+    height: 0px;
+	color: #7A8ABE;
 	font-size: 18px;
 	font-family: "RixHeadB";
+	text-overflow: ellipsis;
+}
+
+.vod_year_div{
+	position: absolute;
+	left: 35%;
+	bottom: 37%;
+    height: 22px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 .vod_year {
 	position: absolute;
-	left: 35%;
-    bottom: 37%;
+	margin: auto;
+	text-align: left;
+	left: 0%;
     height: 0px;
 	color: #787878;
-	text-align: left;
 	font-size: 18px;
 	font-family: "RixHeadB";
+	text-overflow: ellipsis;
+}
+.vod_genres_div{
+	position: absolute;
+	left: 41%;
+	bottom: 37%;
+    height: 22px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 .vod_genres {
 	position: absolute;
-	left: 41%;
-    bottom: 37%;
+	margin: auto;
+	text-align: left;
+	left: 0%;
     height: 0px;
+	text-overflow: ellipsis;
 	color: #787878;
 	text-align: left;
 	font-size: 18px;
 	font-family: "RixHeadB";
+	text-overflow: ellipsis;
 }
 .vod_hot_type_icon {
 	position: absolute;
@@ -147,15 +179,36 @@
 	opacity: 0.14;
 }
 
+.vod_director_tag_div{
+	position: absolute;
+	left: 26%;
+	bottom: 28%;
+    height: 20px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+}
 .vod_director_tag{
 	position: absolute;
 	color:#7BA4A2;
 	font-family: "RixHeadB";
 	font-size: 16px;
+	margin: auto;
 	text-align: left;
-	left: 26%;
-    bottom: 28%;
+	left: 0%;
+    height: 0px;
+	text-overflow: ellipsis;
 	text-decoration: underline;
+}
+.vod_director_div{
+	position: absolute;
+	left: 32%;
+	bottom: 28%;
+    height: 24px;
+    overflow: hidden;
+	width: 130px;
+	overflow-x: hidden;
+    overflow-y: hidden;
+	text-overflow: ellipsis;
 }
 .vod_director{
 	position: absolute;
@@ -163,14 +216,19 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 32%;
-	width: 130px;
+	left: 0%;
+	margin: auto;
+	width: 100%px;
 	overflow: hidden;
-	height: 20px;
-	bottom: 28%;
-	overflow-x: hidden;
-    overflow-y: hidden;
 	text-overflow: clip;
+}
+.vod_star_tag_div{
+	position: absolute;
+	left: 44%;
+	bottom: 28%;
+    height: 20px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 .vod_star_tag{
 	position: absolute;
@@ -178,9 +236,20 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 44%;
-    bottom: 28%;
+	margin: auto;
+	left: 0%;
 	text-decoration: underline;
+}
+.vod_star_div{
+	position: absolute;
+	left: 50%;
+	bottom: 28%;
+    height: 20px;
+	width: 40%;
+    overflow: hidden;
+	overflow-x: hidden;
+    overflow-y: hidden;
+	text-overflow: ellipsis;
 }
 .vod_star{
 	position: absolute;
@@ -188,13 +257,21 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 50%;
-	height: 20px;
-	width: 40%;
-	bottom: 28%;
+	left: 0%;
+	margin: auto;
+	width: 100%;
+	text-overflow: clip;
+}
+.vod_subtitle_div{
+	position: absolute;
+	left: 26%;
+	bottom: 18%;
+    height: 59px;
+	width: 64%;
+    overflow: hidden;
 	overflow-x: hidden;
     overflow-y: hidden;
-	text-overflow: clip;
+	text-overflow: ellipsis;
 }
 .vod_subtitle{
 	position: absolute;
@@ -202,12 +279,10 @@
 	font-family: "RixHeadB";
 	font-size: 16px;
 	text-align: left;
-	left: 26%;
-	height: 59px;
-	width: 64%;
+	left: 0%;
+	margin: auto;
+	width: 100%;
 	bottom: 18%;
-	overflow-x: hidden;
-    overflow-y: hidden;
 	text-overflow: clip;
 }
 /** (End) VOD infomation **/
