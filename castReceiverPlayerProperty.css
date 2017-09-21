@@ -76,7 +76,7 @@
 	left: 28%;
 	bottom: 37%;
 	width: 5%;
-    height: 22px;
+    height: 18px;
     overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -97,7 +97,7 @@
 	position: absolute;
 	left: 35%;
 	bottom: 37%;
-    height: 22px;
+    height: 18px;
 	width: 4%;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -118,7 +118,7 @@
 	left: 41%;
 	bottom: 37%;
 	width: 20%;
-    height: 22px;
+    height: 18px;
     overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -185,8 +185,8 @@
 .vod_director_tag_div{
 	position: absolute;
 	left: 26%;
-	width: 4%;
-	bottom: 28%;
+	width: 6%;
+	bottom: 31%;
     height: 20px;
     overflow: hidden;
 	text-overflow: ellipsis;
@@ -206,8 +206,8 @@
 .vod_director_div{
 	position: absolute;
 	left: 32%;
-	bottom: 28%;
-    height: 24px;
+	bottom: 31%;
+    height: 20px;
 	width: 10%;
     overflow: hidden;
 	width: 130px;
@@ -230,7 +230,7 @@
 .vod_star_tag_div{
 	position: absolute;
 	left: 44%;
-	bottom: 28%;
+	bottom: 31%;
     height: 20px;
     overflow: hidden;
 	width: 4%;
@@ -249,7 +249,7 @@
 .vod_star_div{
 	position: absolute;
 	left: 50%;
-	bottom: 28%;
+	bottom: 31%;
     height: 20px;
 	width: 40%;
     overflow: hidden;
