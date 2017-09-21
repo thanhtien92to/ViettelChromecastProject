@@ -233,7 +233,7 @@
 	bottom: 31%;
     height: 20px;
     overflow: hidden;
-	width: 4%;
+	width: 6%;
 	text-overflow: ellipsis;
 }
 .vod_star_tag{
@@ -271,7 +271,7 @@
 .vod_subtitle_div{
 	position: absolute;
 	left: 26%;
-	bottom: 18%;
+	bottom: 21%;
     height: 59px;
 	width: 64%;
     overflow: hidden;
@@ -288,7 +288,7 @@
 	left: 0%;
 	margin: auto;
 	width: 100%;
-	bottom: 18%;
+	top: 0%;
 	text-overflow: clip;
 }
 /** (End) VOD infomation **/
