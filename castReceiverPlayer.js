@@ -73,7 +73,10 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
 		document.getElementById("vodStarTag").innerHTML = "Diễn Viên";
 	}
 	else{
-		this.domElement_.setAttribute(domElementArtributeLang,'en');
+		//this.domElement_.setAttribute(domElementArtributeLang,'en');
+		this.domElement_.setAttribute(domElementArtributeLang,'vi');
+		document.getElementById("vodDirectorTag").innerHTML = "Đạo Diễn";
+		document.getElementById("vodStarTag").innerHTML = "Diễn Viên";
 	}
     this.mediaType_; //The current type of the player. @private {castReceiverPlayer.Type}
     this.setMediaType_(castReceiverPlayer.Type.UNKNOWN, false);
@@ -143,7 +146,7 @@ castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = c
     /* (End) Media menager onStop*/
     /* Media menager onLoadMetadataError*/
     this.onLoadMetadataErrorOrig_ = this.mediaManager_.onLoadMetadataError.bind(this.mediaManager_); //The original metadata error callback. @private {?function(!cast.receiver.MediaManager.LoadInfo)}
-    this.mediaManager_.onLoadMetadataError = this.onLoadMetadataError_.bind(this);
+    this.mediaManager_.onLoadMetadataError   = this.onLoadMetadataError_.bind(this);
     /* (End) Media menager onLoadMetadataError*/
     /* Media menager onError*/
     this.onErrorOrig_ = this.mediaManager_.onError.bind(this.mediaManager_); //The original error callback. @private {?function(!Object)}
@@ -567,6 +570,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 		console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
         requestInfo.headers = {};
 		requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+		requestInfo.headers['host'] = 'sec.viettelttv.com.vn';
 		//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 		//requestInfo.headers['Origin'] = '*';
     };/**/
@@ -869,6 +873,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 				requestInfo.headers = {};
 				requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+				requestInfo.headers['host'] = 'sec.viettelttv.com.vn';
 				//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 				//requestInfo.headers['Origin'] = '*';
 			};/**/
@@ -1040,6 +1045,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 					console.log('updateLicenseRequestInfo --- requestInfo : ' + JSON.stringify(requestInfo));
 					requestInfo.headers = {};
 					requestInfo.headers['AUTHORIZATION'] = 'BASIC QWx0aWNhc3Q6RFJNU2VydmljZQ==';
+					requestInfo.headers['host'] = 'sec.viettelttv.com.vn';
 					//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 					//requestInfo.headers['Origin'] = '*';
 				};/**/
