@@ -208,7 +208,7 @@
 	left: 34%;
 	bottom: 29%;
     height: 20px;
-	width: 10%;
+	width: 12%;
     overflow: hidden;
 	overflow-x: hidden;
     overflow-y: hidden;
@@ -228,7 +228,7 @@
 }
 .vod_star_tag_div{
 	position: absolute;
-	left: 46%;
+	left: 48%;
 	bottom: 29%;
     height: 20px;
     overflow: hidden;
@@ -247,10 +247,10 @@
 }
 .vod_star_div{
 	position: absolute;
-	left: 54%;
+	left: 56%;
 	bottom: 29%;
     height: 20px;
-	width: 38%;
+	width: 36%;
     overflow: hidden;
 	overflow-x: hidden;
     overflow-y: hidden;
