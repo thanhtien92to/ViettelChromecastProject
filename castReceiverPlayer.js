@@ -576,7 +576,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
     };/**/
 	
 	host.processLicense = function(data) {
-		console.log("processLicense(data): data = "JSON.stringify(data));
+		console.log("processLicense(data): data = "+JSON.stringify(data));
 		return data;
 	}
 
@@ -884,7 +884,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 			};/**/
 			
 			host.processLicense = function(data) {
-				console.log("processLicense(data): data = "JSON.stringify(data));
+				console.log("processLicense(data): data = "+JSON.stringify(data));
 				return data;
 			}
             host.onError = loadErrorCallback;
@@ -1058,6 +1058,10 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 					//requestInfo.headers['Access-Control-Allow-Origin'] = '*';
 					//requestInfo.headers['Origin'] = '*';
 				};/**/
+				host.processLicense = function(data) {
+					console.log("processLicense(data): data = "+JSON.stringify(data));
+					return data;
+				}
 				
                 this.protocol_ = null;
                 this.player_ = new cast.player.api.Player(host);
