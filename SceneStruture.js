@@ -81,7 +81,7 @@ W.defineModule([], function() {
     var _listName3Div; // Div tag for part N
     var data; // Data object contain all information of this scene
     var currentState; // Current State on scene
-    var previouState; // Previous State of scene
+    var previousState; // Previous State of scene
     var partName1NeedUpdateData;
     var partName2NeedUpdateData;
     var partName3NeedUpdateData;
@@ -107,7 +107,7 @@ W.defineModule([], function() {
         var _parentDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
         var areaFocused; // true if focused else false
 
         this.mcreate = function () {
@@ -183,7 +183,7 @@ W.defineModule([], function() {
         var _parentDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
         var areaFocused; // true if focused else false
 
         this.mcreate = function () {
@@ -259,7 +259,7 @@ W.defineModule([], function() {
         var _parentDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
         var areaFocused; // true if focused else false
 
         this.mcreate = function () {
@@ -349,7 +349,9 @@ W.defineModule([], function() {
         var _focusDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
+        var currentIndex;
+        var previousIndex;
         var areaFocused; // true if focused else false
 
         // +        mcreate() // Gen UI component
@@ -517,7 +519,9 @@ W.defineModule([], function() {
         var _focusDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
+        var currentIndex;
+        var previousIndex;
         var areaFocused; // true if focused else false
 
         // +        mcreate() // Gen UI component
@@ -685,7 +689,9 @@ W.defineModule([], function() {
         var _focusDiv;
         var data; // Data object contain all information of this scene
         var currentState; // Current State on scene
-        var previouState; // Previous State of scene
+        var previousState; // Previous State of scene
+        var currentIndex;
+        var previousIndex;
         var areaFocused; // true if focused else false
 
         // +        mcreate() // Gen UI component
@@ -1000,6 +1006,9 @@ W.defineModule([], function() {
     };
     this.get_listName3Div = function () {
         return  _listName3Div;
+    };
+    this.getCurrentState = function () {
+        return currentState;
     };
 
     return W.Scene.extend({

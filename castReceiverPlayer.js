@@ -577,7 +577,64 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 	
 	host.processLicense = function(data) {
 		console.log("processLicense(data): data = "+JSON.stringify(data));
-		return data;
+		var seed = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE];
+		var seedSalt = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE];
+		var dataLength = 0;
+		while(data[dataLength]){
+			dataLength++;
+		}
+		console.log("processLicense(data): dataLength = "+dataLength);
+		var saltLength = dataLength - 32;
+		if(saltLength<0){
+			return data;
+		}
+		//var salt = [0xA0, 0x85, 0x51, 0x8E, 0xA0, 0x71, 0x3E, 0xD5, 0x92];
+		//var seedSalt = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE,
+		//	0xA0, 0x85, 0x51, 0x8E, 0xA0, 0x71, 0x3E, 0xD5, 0x92];
+		//var seedSalt = 0x8BB9E1B1150EF4B73A54C48F4F75A3FEA085518EA0713ED592;
+		var salt = [];
+		for(var i = 0; i<saltLength; i++){
+			salt[i] = data[i];
+			seedSalt.push(data[i]);
+		}
+		//var encryptedKey = [0x9F, 0xAC, 0xA1, 0xA2, 0xAB, 0x08, 0x94, 0xFA, 0xEC, 0x37, 0x73, 0x5A, 0x12, 
+		//0x7E, 0x57, 0x35, 0xBA, 0x9C, 0x45, 0xC6, 0x85, 0x25, 0x41, 0xB1, 0xE9, 0x2D, 0xBC, 0xC0, 0x34, 0x0F, 0x74, 0x72];
+		var encryptedKey = [];
+		for(var i = 0; i<32; i++){
+			encryptedKey[i] = data[i+saltLength];
+		}
+		
+		var sha1SeedSalt = sha1(seedSalt);
+		var sha1Key = [parseInt("0x"+sha1SeedSalt[0]+sha1SeedSalt[1]),parseInt("0x"+sha1SeedSalt[2]+sha1SeedSalt[3]),parseInt("0x"+sha1SeedSalt[4]+sha1SeedSalt[5]),parseInt("0x"+sha1SeedSalt[6]+sha1SeedSalt[7]),
+			parseInt("0x"+sha1SeedSalt[8]+sha1SeedSalt[9]),parseInt("0x"+sha1SeedSalt[10]+sha1SeedSalt[11]),parseInt("0x"+sha1SeedSalt[12]+sha1SeedSalt[13]),parseInt("0x"+sha1SeedSalt[14]+sha1SeedSalt[15]),
+			parseInt("0x"+sha1SeedSalt[16]+sha1SeedSalt[17]),parseInt("0x"+sha1SeedSalt[18]+sha1SeedSalt[19]),parseInt("0x"+sha1SeedSalt[20]+sha1SeedSalt[21]),parseInt("0x"+sha1SeedSalt[22]+sha1SeedSalt[23]),
+			parseInt("0x"+sha1SeedSalt[24]+sha1SeedSalt[25]),parseInt("0x"+sha1SeedSalt[26]+sha1SeedSalt[27]),parseInt("0x"+sha1SeedSalt[28]+sha1SeedSalt[29]),parseInt("0x"+sha1SeedSalt[30]+sha1SeedSalt[31])];
+		var sha1IV = [sha1Key[4],sha1Key[5],sha1Key[6],sha1Key[7],
+			sha1Key[8],sha1Key[9],sha1Key[10],sha1Key[11],
+			sha1Key[12],sha1Key[13],sha1Key[14],sha1Key[15],
+			parseInt("0x"+sha1SeedSalt[32]+sha1SeedSalt[33]),parseInt("0x"+sha1SeedSalt[34]+sha1SeedSalt[35]),parseInt("0x"+sha1SeedSalt[36]+sha1SeedSalt[37]),parseInt("0x"+sha1SeedSalt[38]+sha1SeedSalt[39])];
+		
+		//encryptedHex = "9FACA1A2AB0894FAEC37735A127E5735BA9C45C6852541B1E92DBCC0340F7472";
+		encryptedHex = aesjs.utils.hex.fromBytes(encryptedKey);
+
+		// When ready to decrypt the hex string, convert it back to bytes
+		var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+
+		// The cipher-block chaining mode of operation maintains internal
+		// state, so to decrypt a new instance must be instantiated.
+		var aesCbc = new aesjs.ModeOfOperation.cbc(sha1Key, sha1IV);
+		var decryptedBytes = aesCbc.decrypt(encryptedBytes);
+
+		// Convert our bytes back into text
+		var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
+		console.log(decryptedHex.substring(0,32));
+		
+		var returnData = {};
+		for(var i=0; i<16; i++){
+			returnData[""+i] = decryptedBytes[i];
+		}
+			
+		return returnData;
 	}
 
     host.onError = function () {
@@ -885,7 +942,64 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 			
 			host.processLicense = function(data) {
 				console.log("processLicense(data): data = "+JSON.stringify(data));
-				return data;
+				var seed = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE];
+				var seedSalt = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE];
+				var dataLength = 0;
+				while(data[dataLength]){
+					dataLength++;
+				}
+				console.log("processLicense(data): dataLength = "+dataLength);
+				var saltLength = dataLength - 32;
+				if(saltLength<0){
+					return data;
+				}
+				//var salt = [0xA0, 0x85, 0x51, 0x8E, 0xA0, 0x71, 0x3E, 0xD5, 0x92];
+				//var seedSalt = [0x8B, 0xB9, 0xE1, 0xB1, 0x15, 0x0E, 0xF4, 0xB7, 0x3A, 0x54, 0xC4, 0x8F, 0x4F, 0x75, 0xA3, 0xFE,
+				//	0xA0, 0x85, 0x51, 0x8E, 0xA0, 0x71, 0x3E, 0xD5, 0x92];
+				//var seedSalt = 0x8BB9E1B1150EF4B73A54C48F4F75A3FEA085518EA0713ED592;
+				var salt = [];
+				for(var i = 0; i<saltLength; i++){
+					salt[i] = data[i];
+					seedSalt.push(data[i]);
+				}
+				//var encryptedKey = [0x9F, 0xAC, 0xA1, 0xA2, 0xAB, 0x08, 0x94, 0xFA, 0xEC, 0x37, 0x73, 0x5A, 0x12, 
+				//0x7E, 0x57, 0x35, 0xBA, 0x9C, 0x45, 0xC6, 0x85, 0x25, 0x41, 0xB1, 0xE9, 0x2D, 0xBC, 0xC0, 0x34, 0x0F, 0x74, 0x72];
+				var encryptedKey = [];
+				for(var i = 0; i<32; i++){
+					encryptedKey[i] = data[i+saltLength];
+				}
+				
+				var sha1SeedSalt = sha1(seedSalt);
+				var sha1Key = [parseInt("0x"+sha1SeedSalt[0]+sha1SeedSalt[1]),parseInt("0x"+sha1SeedSalt[2]+sha1SeedSalt[3]),parseInt("0x"+sha1SeedSalt[4]+sha1SeedSalt[5]),parseInt("0x"+sha1SeedSalt[6]+sha1SeedSalt[7]),
+					parseInt("0x"+sha1SeedSalt[8]+sha1SeedSalt[9]),parseInt("0x"+sha1SeedSalt[10]+sha1SeedSalt[11]),parseInt("0x"+sha1SeedSalt[12]+sha1SeedSalt[13]),parseInt("0x"+sha1SeedSalt[14]+sha1SeedSalt[15]),
+					parseInt("0x"+sha1SeedSalt[16]+sha1SeedSalt[17]),parseInt("0x"+sha1SeedSalt[18]+sha1SeedSalt[19]),parseInt("0x"+sha1SeedSalt[20]+sha1SeedSalt[21]),parseInt("0x"+sha1SeedSalt[22]+sha1SeedSalt[23]),
+					parseInt("0x"+sha1SeedSalt[24]+sha1SeedSalt[25]),parseInt("0x"+sha1SeedSalt[26]+sha1SeedSalt[27]),parseInt("0x"+sha1SeedSalt[28]+sha1SeedSalt[29]),parseInt("0x"+sha1SeedSalt[30]+sha1SeedSalt[31])];
+				var sha1IV = [sha1Key[4],sha1Key[5],sha1Key[6],sha1Key[7],
+					sha1Key[8],sha1Key[9],sha1Key[10],sha1Key[11],
+					sha1Key[12],sha1Key[13],sha1Key[14],sha1Key[15],
+					parseInt("0x"+sha1SeedSalt[32]+sha1SeedSalt[33]),parseInt("0x"+sha1SeedSalt[34]+sha1SeedSalt[35]),parseInt("0x"+sha1SeedSalt[36]+sha1SeedSalt[37]),parseInt("0x"+sha1SeedSalt[38]+sha1SeedSalt[39])];
+				
+				//encryptedHex = "9FACA1A2AB0894FAEC37735A127E5735BA9C45C6852541B1E92DBCC0340F7472";
+				encryptedHex = aesjs.utils.hex.fromBytes(encryptedKey);
+
+				// When ready to decrypt the hex string, convert it back to bytes
+				var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
+
+				// The cipher-block chaining mode of operation maintains internal
+				// state, so to decrypt a new instance must be instantiated.
+				var aesCbc = new aesjs.ModeOfOperation.cbc(sha1Key, sha1IV);
+				var decryptedBytes = aesCbc.decrypt(encryptedBytes);
+
+				// Convert our bytes back into text
+				var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
+				console.log(decryptedHex.substring(0,32));
+				
+				var returnData = {};
+				for(var i=0; i<16; i++){
+					returnData[""+i] = decryptedBytes[i];
+				}
+					
+				return returnData;
 			}
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
