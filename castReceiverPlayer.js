@@ -631,7 +631,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 
         var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 		var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
-			
+		console.log("processLicense(data): return data = "+JSON.stringify(decryptedKeyUinit8Array));	
 		return decryptedKeyUinit8Array;
 	};
 
@@ -994,6 +994,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 
                 var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 				var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
+				console.log("processLicense(data): return data = "+JSON.stringify(decryptedKeyUinit8Array));
                 return decryptedKeyUinit8Array;
 			};
             host.onError = loadErrorCallback;
@@ -1223,6 +1224,7 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
 
                     var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 					var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
+					console.log("processLicense(data): return data = "+JSON.stringify(decryptedKeyUinit8Array));
                     return decryptedKeyUinit8Array;
 				};
 				
