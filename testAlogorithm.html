@@ -69,7 +69,7 @@ function myFunction() {
 			parseInt("0x"+sha1SeedSalt[32]+sha1SeedSalt[33]),parseInt("0x"+sha1SeedSalt[34]+sha1SeedSalt[35]),parseInt("0x"+sha1SeedSalt[36]+sha1SeedSalt[37]),parseInt("0x"+sha1SeedSalt[38]+sha1SeedSalt[39])];
 		
 		//encryptedHex = "9FACA1A2AB0894FAEC37735A127E5735BA9C45C6852541B1E92DBCC0340F7472";
-		encryptedHex = aesjs.utils.hex.fromBytes(encryptedKey);
+		var encryptedHex = aesjs.utils.hex.fromBytes(encryptedKey);
 
 		// When ready to decrypt the hex string, convert it back to bytes
 		var encryptedBytes = aesjs.utils.hex.toBytes(encryptedHex);
@@ -82,6 +82,7 @@ function myFunction() {
 		// Convert our bytes back into text
 		var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
 		console.log(decryptedHex.substring(0,32));
+		encryptedBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 		
 		var returnData = {};
 		for(var i=0; i<16; i++){

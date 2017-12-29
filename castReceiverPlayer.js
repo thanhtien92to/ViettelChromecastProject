@@ -628,13 +628,10 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 		// Convert our bytes back into text
 		var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
 		console.log(decryptedHex.substring(0,32));
-		
-		var returnData = {};
-		for(var i=0; i<16; i++){
-			returnData[""+i] = decryptedBytes[i];
-		}
+
+        var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 			
-		return returnData;
+		return decryptedKeyBytes;
 	};
 
     host.onError = function () {
@@ -993,13 +990,10 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				// Convert our bytes back into text
 				var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
 				console.log(decryptedHex.substring(0,32));
-				
-				var returnData = {};
-				for(var i=0; i<16; i++){
-					returnData[""+i] = decryptedBytes[i];
-				}
-					
-				return returnData;
+
+                var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
+
+                return decryptedKeyBytes;
 			};
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -1226,12 +1220,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
                     console.log(decryptedHex.substring(0,32));
 
-                    var returnData = {};
-                    for(var i=0; i<16; i++){
-                        returnData[""+i] = decryptedBytes[i];
-                    }
+                    var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
 
-                    return returnData;
+                    return decryptedKeyBytes;
 				};
 				
                 this.protocol_ = null;
