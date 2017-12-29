@@ -630,8 +630,9 @@ castReceiverPlayer.ChromecastPlayer.prototype.preloadVideo_ = function (mediaInf
 		console.log(decryptedHex.substring(0,32));
 
         var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
+		var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
 			
-		return decryptedKeyBytes;
+		return decryptedKeyUinit8Array;
 	};
 
     host.onError = function () {
@@ -992,8 +993,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.loadVideo_ = function (info) {
 				console.log(decryptedHex.substring(0,32));
 
                 var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
-
-                return decryptedKeyBytes;
+				var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
+                return decryptedKeyUinit8Array;
 			};
             host.onError = loadErrorCallback;
             this.player_ = new cast.player.api.Player(host);
@@ -1221,8 +1222,8 @@ castReceiverPlayer.ChromecastPlayer.prototype.processTtmlCues_ =
                     console.log(decryptedHex.substring(0,32));
 
                     var decryptedKeyBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
-
-                    return decryptedKeyBytes;
+					var decryptedKeyUinit8Array = Uint8Array.from(decryptedKeyBytes);
+                    return decryptedKeyUinit8Array;
 				};
 				
                 this.protocol_ = null;

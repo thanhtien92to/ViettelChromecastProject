@@ -83,7 +83,7 @@ function myFunction() {
 		var decryptedHex = aesjs.utils.hex.fromBytes(decryptedBytes);
 		console.log(decryptedHex.substring(0,32));
 		encryptedBytes = aesjs.utils.hex.toBytes(decryptedHex.substring(0,32));
-		
+    console.log("processLicense(data): return = "+JSON.stringify(encryptedBytes));
 		var returnData = {};
 		for(var i=0; i<16; i++){
 			returnData[""+i] = decryptedBytes[i];

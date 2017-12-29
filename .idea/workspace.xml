@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1988fd90-f52d-4647-998d-4ffed093ecd4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/castReceiverPlayer.js" afterPath="$PROJECT_DIR$/castReceiverPlayer.js" />
       <change beforePath="$PROJECT_DIR$/testAlogorithm.html" afterPath="$PROJECT_DIR$/testAlogorithm.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="castReceiverPlayer.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="castReceiverPlayer.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/castReceiverPlayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="1224" column="45" lean-forward="false" selection-start-line="1224" selection-start-column="45" selection-end-line="1224" selection-end-column="45" />
+            <state relative-caret-position="967">
+              <caret line="1223" column="0" lean-forward="true" selection-start-line="1223" selection-start-column="0" selection-end-line="1223" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -51,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testAlogorithm.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testAlogorithm.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testAlogorithm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="79" />
+            <state relative-caret-position="279">
+              <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -80,8 +79,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/castReceiverPlayerState.css" />
-        <option value="$PROJECT_DIR$/testAlogorithm.html" />
         <option value="$PROJECT_DIR$/castReceiverPlayer.js" />
+        <option value="$PROJECT_DIR$/testAlogorithm.html" />
       </list>
     </option>
   </component>
@@ -248,12 +247,12 @@
       <workItem from="1499825964667" duration="594000" />
       <workItem from="1501482409839" duration="58000" />
       <workItem from="1502259580788" duration="617000" />
-      <workItem from="1514516140247" duration="1753000" />
+      <workItem from="1514516140247" duration="2020000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5276000" />
+    <option name="totallyTimeSpent" value="5543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -361,21 +360,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testAlogorithm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/castReceiverPlayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="1224" column="45" lean-forward="false" selection-start-line="1224" selection-start-column="45" selection-end-line="1224" selection-end-column="45" />
+        <state relative-caret-position="967">
+          <caret line="1223" column="0" lean-forward="true" selection-start-line="1223" selection-start-column="0" selection-end-line="1223" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testAlogorithm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="85" column="79" lean-forward="false" selection-start-line="85" selection-start-column="79" selection-end-line="85" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
