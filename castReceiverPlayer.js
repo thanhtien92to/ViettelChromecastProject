@@ -1,5 +1,5 @@
 /* Global Strict Mode */
-"use strict";
+//"use strict";
 var castReceiverPlayer = castReceiverPlayer || {};
 
 /* Init querySelector var */
