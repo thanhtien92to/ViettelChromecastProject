@@ -44,6 +44,7 @@ var domElementArtributeType = 'type';
 var domElementArtributeState = 'state';
 var domElementArtributeLive = 'live';
 var domElementArtributeLang = 'lang';
+var domElementArtributeCastCastchup="iscastchup";
 /* (End) Init Dom Element Artribute var */
 
 castReceiverPlayer.ChromecastPlayer = function (domElement) { //context this = castReceiverPlayer.ChromecastPlayer. @param {!Element} the DOM element to attach the player
@@ -656,6 +657,12 @@ castReceiverPlayer.ChromecastPlayer.prototype.load = function (info) { //@param 
     var playerType = castReceiverPlayer.getType_(media);
     var isLiveStream = media.streamType === cast.receiver.media.StreamType.LIVE;
 	isLiveStream = isLiveStream||(media.metadata.CHROME_MEDIA_TYPE == "CAST_CATCHUP");
+    if("CAST_CATCHUP"==media.metadata.CHROME_MEDIA_TYPE){
+        this.domElement_.setAttribute(domElementArtributeCastCastchup,"true")
+    }
+    else {
+        this.domElement_.setAttribute(domElementArtributeCastCastchup,"false")
+    }
     if (!media.contentId) {
         console.log('Load failed --- no content');
         self.onLoadMetadataError_(info);
